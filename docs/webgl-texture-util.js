@@ -918,7 +918,7 @@ var WebGLTextureUtil = (function() {
         this.pendingTextures = {};
 
         // Reload this file as a worker.
-        this.worker = new Worker("webgl-texture-util.js");
+        this.worker = new Worker("texture-compressor/webgl-texture-util.js");
 
         // The worker's message handler.
         this.worker.onmessage = function(msg) {
