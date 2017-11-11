@@ -1,10 +1,21 @@
 # Texture compressor
 
-CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in KTX, DDS or PVR containers
+CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in KTX, DDS or PVR containers.
+
+A WebGL texture tester is available on
+
+## Texture tester
+
+A texture tester is available on https://timvanscherpenzeel.github.io/texture-compressor/.
+This is a modified version of Brandon Jones's WebGL texture tester.
 
 ## Status
 
 	Work in progress
+
+## Texture tester
+
+
 
 ## Example
 
