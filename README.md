@@ -25,7 +25,7 @@ A texture tester is available on https://timvanscherpenzeel.github.io/texture-co
 
 ## Licence
 
-Released under [Apache Licence Version 2.0](https://raw.githubusercontent.com/TimvanScherpenzeel/texture-compressor/master/LICENSE).
+My work is released under [GNU General Public License v3.0](https://raw.githubusercontent.com/TimvanScherpenzeel/texture-compressor/master/LICENSE).
 
 This repository distributes multiple binary tools for Windows, Mac and Linux.
 
