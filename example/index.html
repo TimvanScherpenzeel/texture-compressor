@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2014, Brandon Jones. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+  * Redistributions of source code must retain the above copyright notice, this
+    list of conditions and the following disclaimer.
+  * Redistributions in binary form must reproduce the above copyright notice,
+    this list of conditions and the following disclaimer in the documentation
+    and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>Texture Format Tester</title>
+
+    <style>
+      head, body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        background: #888888;
+      }
+
+      h1 {
+        text-align: left;
+        font-size: 1.1em;
+        left: 1em;
+        right: 1em;
+        margin: 1em 1em 0 1em;
+        border-bottom: 1px solid black;
+      }
+
+      h3.error {
+        text-align: center;
+        color: #CC0000;
+        background: #440000;
+        padding: 0.5em;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      #header {
+        margin: 1em;
+      }
+
+      #header p {
+        margin-left: 2em;
+        margin-right: 2em;
+      }
+
+      #main {
+        margin: 1em;
+      }
+
+      .texture {
+        display: inline-block;
+        width: 256px;
+        height: 256px;
+        margin: 0.5em;
+        background: #333333;
+        background-size: 100% 100%;
+        position: relative;
+        border: 2px solid #444444;
+      }
+
+      .texture h2 {
+        font-size: 0.9em;
+        text-shadow: 2px 2px #000000;
+        color: #EDEDED;
+        padding: 0;
+        margin: 1em;]
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .texture .stats {
+        opacity: 0.0;
+        border-radius: 5px;
+        font-size: 0.8em;
+        color: #FFFFFF;
+        background: #000000;
+        margin: 0.5em;
+        padding: 0.5em;
+        list-style: none;
+        transition: opacity 0.2s;
+        position: absolute;
+        top: 3em;
+        left: 0;
+      }
+
+      .texture .stats li {
+        margin: 0;
+        padding: 0;
+      }
+
+      .texture:hover .stats,
+      .texture:focus .stats {
+        opacity: 0.8;
+      }
+
+      .texture.error {
+        background: #440000;
+      }
+
+      .texture.error .errorText {
+        font-size: 0.8em;
+        color: #CC0000;
+        padding: 0;
+        margin: 1em;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
+
+    <script src="webgl-texture-util.js"></script>
+
+    <script id="default-vs" type="x-shader/x-vertex">
+      precision mediump float;
+
+      attribute vec2 Position;
+      attribute vec2 TexCoord;
+
+      varying vec2 vTexCoord;
+
+      void main(void) {
+        vTexCoord = TexCoord;
+        gl_Position = vec4(Position, 1.0, 1.0);
+      }
+    </script>
+
+    <script id="default-fs" type="x-shader/x-fragment">
+      precision mediump float;
+
+      varying vec2 vTexCoord;
+      uniform sampler2D diffuse;
+
+      void main(void) {
+        gl_FragColor = texture2D(diffuse, vTexCoord);
+      }
+    </script>
+  </head>
+  <body>
+
+    <section id="header">
+      <h1>WebGL Texture Tester</h1>
+
+      <p>This page attempts to load one of every texture format supported by
+      WebGL (excluding videos). It is intended to quickly show which formats
+      your browser/device supports, and give browser vendors a quick way to
+	  sanity-check their implementations.</p>
+
+	  <p>This WebGL texture tester has been developed by Brandon Jones (<a href="https://twitter.com/Tojiro">@Tojiro</a> on Twitter).</p>
+	  <p>You can find the repository including the original sourecode <a href="https://github.com/toji/texture-tester/">here</a>.</p>
+	</section>
+
+    <section id="main">
+      <h1>Browser Native Formats (Uncompressed)</h1>
+
+      <div class="texture" x-src="example.png" x-size-bytes="463987">
+        <h2>PNG</h2>
+      </div>
+
+      <h1>
+        <a href="http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/">
+          WEBGL_compressed_texture_s3tc
+        </a>
+      </h1>
+
+      <div class="texture" x-src="example-dxt5.dds" x-size-bytes="349680">
+        <h2>DXT5</h2>
+      </div>
+
+      <h1>
+        <a href="http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/">
+          WEBGL_compressed_texture_s3tc
+        </a> with
+        <a href="https://code.google.com/p/crunch/">
+          Crunch Compression
+        </a>
+      </h1>
+
+      <div class="texture" x-src="example-dxt5.crn" x-size-bytes="71722">
+        <h2>DXT5 (Crunch)</h2>
+      </div>
+    </section>
+
+    <script>
+      var canvas = document.createElement("canvas");
+      canvas.width = 256;
+      canvas.height = 256;
+
+      var gl = WebGLUtil.getContext(canvas);
+
+      if (gl) {
+        var textureUtil = new WebGLTextureUtil(gl, true);
+        var shader = WebGLUtil.createProgramFromTags(gl, "#default-vs", "#default-fs");
+        gl.useProgram(shader.program);
+        gl.clearColor(0.0, 0.0, 0.0, 1.0);
+
+        var quadBuffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, quadBuffer);
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+          -1,  1,   0, 0,
+           1,  1,   1, 0,
+           1, -1,   1, 1,
+
+          -1,  1,   0, 0,
+           1, -1,   1, 1,
+          -1, -1,   0, 1,
+        ]), gl.STATIC_DRAW);
+
+        gl.enableVertexAttribArray(shader.attribute.Position);
+        gl.enableVertexAttribArray(shader.attribute.TexCoord);
+        gl.vertexAttribPointer(shader.attribute.Position, 2, gl.FLOAT, false, 16, 0);
+        gl.vertexAttribPointer(shader.attribute.TexCoord, 2, gl.FLOAT, false, 16, 8);
+
+        gl.uniform1i(shader.uniform.diffuse, 0);
+
+        function loadTexture(texElem) {
+          var textureSrc = texElem.getAttribute("x-src");
+          texElem.tabIndex = 0;
+
+          var statsList = document.createElement("ul");
+              statsList.classList.add("stats");
+              texElem.appendChild(statsList);
+
+          function addStat(name, value) {
+            var stat = document.createElement("li");
+            stat.innerHTML = "<b>" + name + ":</b> " + value;
+            statsList.appendChild(stat);
+          }
+
+          textureUtil.loadTexture(textureSrc, null, function(texture, error, stats) {
+            if (stats != null) {
+              addStat("Size in memory (Lvl 0)", Math.floor(stats.levelZeroSize / 1024) + " Kb");
+              addStat("Dimensions", stats.width + " x " + stats.height);
+              addStat("Upload time", Math.floor(stats.uploadTime) + " ms");
+            }
+
+            if (!error) {
+              gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+              gl.bindTexture(gl.TEXTURE_2D, texture);
+              gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+              var dataUrl = canvas.toDataURL();
+              texElem.style.backgroundImage = "url(" + dataUrl + ")";
+            } else {
+              var errorElem = document.createElement("div");
+              errorElem.classList.add("errorText");
+              errorElem.innerHTML = error;
+              texElem.appendChild(errorElem);
+              texElem.classList.add("error");
+            }
+          });
+        }
+
+        var textures = document.querySelectorAll(".texture");
+
+        for (var i = 0; i < textures.length; ++i) {
+          loadTexture(textures[i]);
+        }
+      } else {
+        var main = document.getElementById("main");
+        main.innerHTML = "<h3 class='error'>WebGL not Supported</h3>";
+      }
+    </script>
+  </body>
+</html>
