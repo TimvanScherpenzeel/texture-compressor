@@ -25,6 +25,8 @@ A texture tester is available on https://timvanscherpenzeel.github.io/texture-co
 
 ## Licence
 
+Released under [Apache Licence Version 2.0](https://raw.githubusercontent.com/TimvanScherpenzeel/texture-compressor/master/LICENSE).
+
 This repository distributes multiple binary tools for Windows, Mac and Linux.
 
 [astcenc](https://raw.githubusercontent.com/ARM-software/astc-encoder/master/license.txt)
@@ -34,5 +36,3 @@ This repository distributes multiple binary tools for Windows, Mac and Linux.
 [EtcTool](https://raw.githubusercontent.com/google/etc2comp/master/LICENSE)
 
 [PVRTexToolCLI](https://community.imgtec.com/developers/powervr/sdk-end-user-licence-agreement/)
-
-[gltf-pipeline](https://raw.githubusercontent.com/AnalyticalGraphicsInc/gltf-pipeline/master/LICENSE.md)
