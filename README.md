@@ -1,6 +1,6 @@
 # Texture compressor
 
-CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in KTX, DDS or PVR containers.
+CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR containers.
 
 ## Texture tester
 
