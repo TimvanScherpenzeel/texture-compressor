@@ -22,3 +22,7 @@ A texture tester is available on https://timvanscherpenzeel.github.io/texture-co
 	-f, --flags "mipmode none" "quality 100"
 
     node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-dxt5.dds -m s3tc -c dxt5 -f "mipmode none" "quality 100"
+
+## Licence
+
+[Released under Apache-2.0](https://raw.githubusercontent.com/TimvanScherpenzeel/texture-compressor/master/LICENCE)
