@@ -14,9 +14,6 @@ Tool for texture compression using ASTC, ETC, PVR and S3TC in a DSS container
 	-m, --method s3tc
 	-c, --compression dxt5
 
-	ASTC:
-	-bz, --blocksize 10x10
-
 	Optional:
 	-f, --flags "mipmode none" "quality 100"
 
