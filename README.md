@@ -17,11 +17,13 @@ A texture tester is available on https://timvanscherpenzeel.github.io/texture-co
 	-o, --output ./docs/example.dds
 	-m, --method s3tc
 	-c, --compression dxt5
+	-q, --quality [0 - 10]
+	-t, --transparant [true / false]
 
 	Optional:
-	-f, --flags "mipmode none" "quality 100"
+	-f, --flags "rescalemode lo"
 
-    node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-dxt5.dds -m s3tc -c dxt5 -f "mipmode none" "quality 100"
+    node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-dxt5.dds -m s3tc -c dxt5 -q 10 -t -f "rescalemode lo"
 
 ## Licence
 
