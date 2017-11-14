@@ -10,20 +10,23 @@ A texture tester is available on https://timvanscherpenzeel.github.io/texture-co
 
 	Work in progress
 
-## Example
+## Flags
 
-	General:
-	-i, --input ./docs/example.png
-	-o, --output ./docs/example.dds
-	-m, --method s3tc
-	-c, --compression dxt5
+	Required:
+	-c, --compression dxt5 [required]
+	-i, --input ./docs/example.png [required]
+	-o, --output ./docs/example.dds [required]
+	-m, --method s3tc [required]
+
+	Optional:
+	-b, --bitrate [2.0 - 4.0, default: 2.0]
 	-q, --quality [0 - 10, default: 5]
 	-t, --transparant [true / false, default: false]
 
-	-b, --bitrate [2.0 - 4.0, default: 2.0]
+	Tool:
+	-f, --flags ["flag value" "flag value" "flag value"]
 
-	Optional:
-	-f, --flags "rescalemode lo"
+## Example
 
 	ASTC:
 	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-astc.dds -m astc -c astc
