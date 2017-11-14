@@ -2,10 +2,6 @@
 
 CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR containers.
 
-## Status
-
-	Experimental
-
 ## Installation
 
 ```sh
