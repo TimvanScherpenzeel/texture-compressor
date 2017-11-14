@@ -29,12 +29,14 @@ CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR c
 - Astcenc - https://github.com/ARM-software/astc-encoder
 - Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
+
 	node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
 
 ### ETC
 - Supported by most Android devices
 - Etc2comp - https://github.com/google/etc2comp
 - Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
+
 
 	node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-etc1.dds -m etc -c etc1
 
@@ -43,12 +45,14 @@ CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR c
 - PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
 - Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
 
+
 	node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-pvrtc1.pvr -m pvr -c pvrtc1
 
 ### S3TC
 - Supported by all desktop devices and some Android devices
 - Crunch - https://code.google.com/archive/p/crunch/
 - Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
+
 
     node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
 
