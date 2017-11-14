@@ -48,10 +48,7 @@ Much has been based on the automated texture compression tool baked into [gltf-p
 
 This repository distributes multiple binary tools for Windows, Mac and Linux.
 
-[astcenc](https://raw.githubusercontent.com/ARM-software/astc-encoder/master/license.txt)
-
-[crunch](https://raw.githubusercontent.com/Unvanquished/crunch/master/license.txt)
-
-[EtcTool](https://raw.githubusercontent.com/google/etc2comp/master/LICENSE)
-
-[PVRTexToolCLI](https://community.imgtec.com/developers/powervr/sdk-end-user-licence-agreement/)
+- [astcenc](https://raw.githubusercontent.com/ARM-software/astc-encoder/master/license.txt)
+- [EtcTool](https://raw.githubusercontent.com/google/etc2comp/master/LICENSE)
+- [PVRTexToolCLI](https://community.imgtec.com/developers/powervr/sdk-end-user-licence-agreement/)
+- [crunch](https://raw.githubusercontent.com/Unvanquished/crunch/master/license.txt)
