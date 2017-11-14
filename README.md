@@ -10,8 +10,8 @@ CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR c
 
 ### Required
 	-c, --compression ['astc', 'etc1', 'etc2', 'pvrtc1', 'dxt1', 'dxt3', 'dxt5'] [required]
-	-i, --input [example: ./docs/example.png] [required]
-	-o, --output [example: ./docs/example.dds] [required]
+	-i, --input [example: ./example/example.png] [required]
+	-o, --output [example: ./example/example.dds] [required]
 	-m, --method ['astc', 'etc', 'pvr', 's3tc'] [required]
 
 ### Optional
@@ -25,16 +25,16 @@ CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR c
 ## Example
 
 ### ASTC
-	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-astc.dds -m astc -c astc
+	node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
 
 ### ETC
-	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-etc1.dds -m etc -c etc1
+	node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-etc1.dds -m etc -c etc1
 
 ### PVR
-	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-pvrtc1.pvr -m pvr -c pvrtc1
+	node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-pvrtc1.pvr -m pvr -c pvrtc1
 
 ### S3TC
-    node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-dxt5.dds -m s3tc -c dxt5
+    node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
 
 ## Licence
 
