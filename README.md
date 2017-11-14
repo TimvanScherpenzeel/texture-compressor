@@ -6,23 +6,7 @@ CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR c
 
 	Experimental
 
-## Flags
-
-### Required
-	-c, --compression ['astc', 'etc1', 'etc2', 'pvrtc1', 'dxt1', 'dxt3', 'dxt5'] [required]
-	-i, --input [example: ./example/example.png] [required]
-	-o, --output [example: ./example/example.dds] [required]
-	-m, --method ['astc', 'etc', 'pvr', 's3tc'] [required]
-
-### Optional
-	-b, --bitrate [2.0 - 4.0, default: 2.0] [not required]
-	-q, --quality [0 - 10, default: 5] [not required]
-	-t, --transparant [true / false, default: false] [not required]
-
-### Tool flags
-	-f, --flags ["flag value" "flag value"] [not required]
-
-## Install
+## Installation
 
 ```sh
 npm install -g --save texture-compressor
@@ -69,6 +53,22 @@ texture-compressor -i ./example/example.png -o ./example/example-pvrtc1.pvr -m p
 
 texture-compressor -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
 ```
+
+## Flags
+
+### Required
+	-c, --compression ['astc', 'etc1', 'etc2', 'pvrtc1', 'dxt1', 'dxt3', 'dxt5'] [required]
+	-i, --input [example: ./example/example.png] [required]
+	-o, --output [example: ./example/example.dds] [required]
+	-m, --method ['astc', 'etc', 'pvr', 's3tc'] [required]
+
+### Optional
+	-b, --bitrate [2.0 - 4.0, default: 2.0] [not required]
+	-q, --quality [0 - 10, default: 5] [not required]
+	-t, --transparant [true / false, default: false] [not required]
+
+### Tool flags
+	-f, --flags ["flag value" "flag value"] [not required]
 
 ## Licence
 
