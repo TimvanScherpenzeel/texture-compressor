@@ -2,13 +2,9 @@
 
 CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR containers.
 
-## Texture tester
-
-A texture tester is available on https://timvanscherpenzeel.github.io/texture-compressor/.
-
 ## Status
 
-	Work in progress
+	Experimental
 
 ## Flags
 
