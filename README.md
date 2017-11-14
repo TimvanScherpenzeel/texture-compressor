@@ -26,13 +26,13 @@ CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR c
 
 ### ASTC
 
-	```sh
-	# Supported by all iOS devices with an A8 processor or higher (iPhone 6+)
-	# Astcenc - https://github.com/ARM-software/astc-encoder
-	#Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
+```sh
+# Supported by all iOS devices with an A8 processor or higher (iPhone 6+)
+# Astcenc - https://github.com/ARM-software/astc-encoder
+#Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
-	node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
-	```
+node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
+```
 
 ### ETC
 	Supported by most Android devices
