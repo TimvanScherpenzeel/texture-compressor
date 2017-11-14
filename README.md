@@ -28,13 +28,13 @@ A texture tester is available on https://timvanscherpenzeel.github.io/texture-co
 
 ## Example
 
-	ASTC:
+### ASTC
 	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-astc.dds -m astc -c astc
 
-	PVR:
+### PVR
 	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-pvrtc1.pvr -m pvr -c pvrtc1
 
-	S3TC:
+### S3TC
     node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-dxt5.dds -m s3tc -c dxt5
 
 ## Licence
