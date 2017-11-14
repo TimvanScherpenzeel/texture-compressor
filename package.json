@@ -1,7 +1,7 @@
 {
   "name": "texture-compressor",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR containers.",
   "main": "index.js",
   "scripts": {
     "lint": "eslint lib/**/*.js"
@@ -10,7 +10,7 @@
     "texture-compressor": "./bin/texture-compressor.js"
   },
   "author": "Tim van Scherpenzeel",
-  "license": "Apache-2.0",
+  "license": "GPL-3.0",
   "dependencies": {
     "argparse": "^1.0.9",
     "bluebird": "^3.5.1",
@@ -20,5 +20,17 @@
     "eslint": "^4.10.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimvanScherpenzeel/texture-compressor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TimvanScherpenzeel/texture-compressor/issues"
+  },
+  "homepage": "https://github.com/TimvanScherpenzeel/texture-compressor#readme"
 }
