@@ -31,6 +31,9 @@ A texture tester is available on https://timvanscherpenzeel.github.io/texture-co
 ### ASTC
 	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-astc.dds -m astc -c astc
 
+### ETC
+	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-etc1.dds -m etc -c etc1
+
 ### PVR
 	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-pvrtc1.pvr -m pvr -c pvrtc1
 
