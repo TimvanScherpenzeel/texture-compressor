@@ -44,6 +44,8 @@ A texture tester is available on https://timvanscherpenzeel.github.io/texture-co
 
 My work is released under [GNU General Public License v3.0](https://raw.githubusercontent.com/TimvanScherpenzeel/texture-compressor/master/LICENSE).
 
+Much has been based on the automated texture compression tool baked into [gltf-pipeline](https://raw.githubusercontent.com/AnalyticalGraphicsInc/gltf-pipeline/master/LICENSE.md).
+
 This repository distributes multiple binary tools for Windows, Mac and Linux.
 
 [astcenc](https://raw.githubusercontent.com/ARM-software/astc-encoder/master/license.txt)
