@@ -13,18 +13,18 @@ A texture tester is available on https://timvanscherpenzeel.github.io/texture-co
 ## Flags
 
 ### Required
-	-c, --compression dxt5 [required]
-	-i, --input ./docs/example.png [required]
-	-o, --output ./docs/example.dds [required]
-	-m, --method s3tc [required]
+	-c, --compression ['astc', 'etc1', 'etc2', 'pvrtc1', 'dxt1', 'dxt3', 'dxt5'] [required]
+	-i, --input [example: ./docs/example.png] [required]
+	-o, --output [example: ./docs/example.dds] [required]
+	-m, --method ['astc', 'etc', 'pvr', 's3tc'] [required]
 
 ### Optional
-	-b, --bitrate [2.0 - 4.0, default: 2.0]
-	-q, --quality [0 - 10, default: 5]
-	-t, --transparant [true / false, default: false]
+	-b, --bitrate [2.0 - 4.0, default: 2.0] [not required]
+	-q, --quality [0 - 10, default: 5] [not required]
+	-t, --transparant [true / false, default: false] [not required]
 
 ### Tool flags
-	-f, --flags ["flag value" "flag value" "flag value"]
+	-f, --flags ["flag value" "flag value"] [not required]
 
 ## Example
 
