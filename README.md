@@ -22,6 +22,12 @@ CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR c
 ### Tool flags
 	-f, --flags ["flag value" "flag value"] [not required]
 
+## Install
+
+```sh
+npm install -g --save texture-compressor
+```
+
 ## Example
 
 ### ASTC
@@ -29,31 +35,40 @@ CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR c
 ```sh
 # Supported by all iOS devices with an A8 processor or higher (iPhone 6+)
 # Astcenc - https://github.com/ARM-software/astc-encoder
-#Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
+# Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
-node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
+texture-compressor -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
 ```
 
 ### ETC
-	Supported by most Android devices
-	Etc2comp - https://github.com/google/etc2comp
-	Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
 
-	node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-etc1.dds -m etc -c etc1
+```sh
+# Supported by most Android devices
+# Etc2comp - https://github.com/google/etc2comp
+# Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
+
+texture-compressor -i ./example/example.png -o ./example/example-etc1.dds -m etc -c etc1
+```
 
 ### PVR
-	Supported by all iOS devices and some Android devices
-	PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
-	Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
 
-	node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-pvrtc1.pvr -m pvr -c pvrtc1
+```sh
+# Supported by all iOS devices and some Android devices
+# PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
+# Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
+
+texture-compressor -i ./example/example.png -o ./example/example-pvrtc1.pvr -m pvr -c pvrtc1
+```
 
 ### S3TC
-	Supported by all desktop devices and some Android devices
-	Crunch - https://code.google.com/archive/p/crunch/
-	Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
 
-    node ./bin/texture-compressor.js -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
+```sh
+# Supported by all desktop devices and some Android devices
+# Crunch - https://code.google.com/archive/p/crunch/
+# Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
+
+texture-compressor -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
+```
 
 ## Licence
 
