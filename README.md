@@ -20,20 +20,19 @@ A texture tester is available on https://timvanscherpenzeel.github.io/texture-co
 	-q, --quality [0 - 10, default: 5]
 	-t, --transparant [true / false, default: false]
 
-	-bi, --bitrate [2.0 - 4.0, default: 2.0]
-	-bl, --blocksize []
+	-b, --bitrate [2.0 - 4.0, default: 2.0]
 
 	Optional:
 	-f, --flags "rescalemode lo"
 
 	ASTC:
-	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-astc.dds -m astc -c astc -bi 2.0
+	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-astc.dds -m astc -c astc
 
 	PVR:
 	node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-pvrtc1.pvr -m pvr -c pvrtc1
 
 	S3TC:
-    node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-dxt5.dds -m s3tc -c dxt5 -q 10 -t -f "rescalemode lo"
+    node ./bin/texture-compressor.js -i ./docs/example.png -o ./docs/example-dxt5.dds -m s3tc -c dxt5
 
 ## Licence
 
