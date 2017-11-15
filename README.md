@@ -59,11 +59,10 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dx
 	-m, --method ['astc', 'etc', 'pvr', 's3tc'] [required]
 
 ### Optional
-	-b, --bitrate [2.0 - 4.0, default: 2.0] [not required]
+	-b, --bitrate [2.0 - 4.0, default: 2.0 = 8x8 blocksize] [not required]
 
 	Or if using ASTC you can optionally change the bitrate for one of the following blocksizes:
-	4x4, 5x4, 5x5, 6x5, 6x6, 8x5, 8x6, 8x8, 10x5, 10x6, 10x8, 10x10, 12x10, 12x12
-	(2.0 bbp = 8x8 blocksize)
+	[4x4, 5x4, 5x5, 6x5, 6x6, 8x5, 8x6, 8x8, 10x5, 10x6, 10x8, 10x10, 12x10, 12x12] [not required]
 
 	-q, --quality [0 - 10, default: 5] [not required]
 	-t, --transparant [true / false, default: false] [not required]
