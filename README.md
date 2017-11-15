@@ -2,6 +2,8 @@
 
 CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR containers.
 
+Easily compress for all hardware using sensible defaults but with the option to pass any custom flag directly to the tool.
+
 ## Installation
 
 ```sh
