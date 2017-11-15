@@ -5,7 +5,7 @@ CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR c
 ## Installation
 
 ```sh
-npm install -g --save texture-compressor
+$ npm install -g --save texture-compressor
 ```
 
 ## Example
@@ -17,7 +17,7 @@ npm install -g --save texture-compressor
 # Astcenc - https://github.com/ARM-software/astc-encoder
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
-texture-compressor -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
+$ texture-compressor -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
 ```
 
 ### ETC
@@ -27,7 +27,7 @@ texture-compressor -i ./example/example.png -o ./example/example-astc.dds -m ast
 # Etc2comp - https://github.com/google/etc2comp
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
 
-texture-compressor -i ./example/example.png -o ./example/example-etc1.dds -m etc -c etc1
+$ texture-compressor -i ./example/example.png -o ./example/example-etc1.dds -m etc -c etc1
 ```
 
 ### PVR
@@ -37,7 +37,7 @@ texture-compressor -i ./example/example.png -o ./example/example-etc1.dds -m etc
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
 
-texture-compressor -i ./example/example.png -o ./example/example-pvrtc1.pvr -m pvr -c pvrtc1
+$ texture-compressor -i ./example/example.png -o ./example/example-pvrtc1.pvr -m pvr -c pvrtc1
 ```
 
 ### S3TC
@@ -47,7 +47,7 @@ texture-compressor -i ./example/example.png -o ./example/example-pvrtc1.pvr -m p
 # Crunch - https://code.google.com/archive/p/crunch/
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
 
-texture-compressor -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
+$ texture-compressor -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
 ```
 
 ## Flags
