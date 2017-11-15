@@ -15,8 +15,9 @@ $ npm install -g --save texture-compressor
 ### ASTC
 
 ```sh
-# Supported by all iOS devices with an A8 processor or higher (iPhone 6+)
+# ASTC - Supported by all iOS devices with an A8 processor or higher (iPhone 6+)
 # Astcenc - https://github.com/ARM-software/astc-encoder
+# DDS container
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
 $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
@@ -25,8 +26,9 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-as
 ### ETC
 
 ```sh
-# Supported by most Android devices
+# ETC1 & ETC2 - Supported by most Android devices
 # Etc2comp - https://github.com/google/etc2comp
+# DDS container
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
 
 $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc1.dds -m etc -c etc1
@@ -35,8 +37,9 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-et
 ### PVR
 
 ```sh
-# Supported by all iOS devices and some Android devices
+# PVRTC1 - Supported by all iOS devices and some Android devices
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
+# PVR container
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
 
 $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-pvrtc1.pvr -m pvr -c pvrtc1
@@ -45,8 +48,9 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-pv
 ### S3TC
 
 ```sh
-# Supported by all desktop devices and some Android devices
+# DXT1 & DXT3 & DXT5 - Supported by all desktop devices and some Android devices
 # Crunch - https://code.google.com/archive/p/crunch/
+# CRN & DDS container
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
 
 $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
