@@ -10,6 +10,10 @@ Easily compress for all hardware using sensible defaults but with the option to 
 
 ## Installation
 
+Make sure you have [Node.js](http://nodejs.org/) installed.
+
+	npm install
+
 ```sh
 $ npm install -g --save texture-compressor
 ```
