@@ -4,7 +4,8 @@
   "description": "CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR containers.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint lib/**/*.js"
+    "lint": "eslint lib/**/*.js",
+    "deploy": "npm version patch && npm publish && git push origin"
   },
   "bin": {
     "texture-compressor": "./bin/texture-compressor.js"
