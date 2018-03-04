@@ -11,7 +11,7 @@
     "texture-compressor": "./bin/texture-compressor.js"
   },
   "author": "Tim van Scherpenzeel",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "dependencies": {
     "argparse": "^1.0.9",
     "bluebird": "^3.5.1",
