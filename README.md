@@ -20,22 +20,22 @@ $ npm install -g --save texture-compressor
 
 ```sh
 # ASTC - Supported by all iOS devices with an A8 processor or higher (iPhone 6+)
-# Astcenc - https://github.com/ARM-software/astc-encoder
-# DDS container
+# PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
+# PVR container
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-astc.pvr -m astc -c astc
 ```
 
 ### ETC
 
 ```sh
 # ETC1 & ETC2 - Supported by most Android devices
-# Etc2comp - https://github.com/google/etc2comp
-# DDS container
+# PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
+# PVR container
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc1.dds -m etc -c etc1
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc1.pvr -m etc -c etc1
 ```
 
 ### PVR
@@ -54,7 +54,7 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-pv
 ```sh
 # DXT1 & DXT3 & DXT5 - Supported by all desktop devices and some Android devices
 # Crunch - https://code.google.com/archive/p/crunch/
-# CRN & DDS container
+# DDS container
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
 
 $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
