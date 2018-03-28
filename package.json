@@ -4,6 +4,7 @@
   "description": "CLI tool for texture compression using ETC, PVRTC and S3TC in DDS or PVR containers.",
   "main": "index.js",
   "scripts": {
+    "start": "http-server --cors -s -o",
     "lint": "eslint lib/**/*.js",
     "deploy": "npm version patch && npm publish && git push origin"
   },
@@ -20,7 +21,8 @@
   "devDependencies": {
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
+    "eslint-plugin-import": "^2.8.0",
+    "http-server": "^0.11.1"
   },
   "directories": {
     "doc": "docs",
