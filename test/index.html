@@ -24,7 +24,8 @@
 			padding: 0px;
 			border: 1px solid red;
 			display: block;
-			max-width: 250px;
+			width: 100vw;
+			height: 100vh;
 		}
 	</style>
 </head>
@@ -79,14 +80,23 @@
 				loadBinary('./../example/example-pvrtc1.pvr'),
 			]);
 
+			const pixelRatio = window.devicePixelRatio;
+
 			result
 				.then((data) => {
 					data.map((file) => {
 						const element = document.getElementById(`${file.type}`);
 						const canvas = document.createElement('canvas');
-						canvas.width = file.width;
-						canvas.height = file.height;
 						const gl = canvas.getContext('webgl');
+
+						canvas.width = file.width * pixelRatio;
+						canvas.height = file.height * pixelRatio;
+						canvas.style.width = `${file.width}px`;
+						canvas.style.height = `${file.height}px`;
+
+						gl.enable(gl.SCISSOR_TEST);
+						gl.viewport(0, 0, file.width * pixelRatio, file.height * pixelRatio);
+						gl.scissor(0, 0, file.width * pixelRatio, file.height * pixelRatio);
 
 						// Get extension to match file
 						const extension = gl.getExtension(`WEBGL_compressed_texture_${file.compression}`);

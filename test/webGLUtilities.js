@@ -30,6 +30,7 @@ function createImage(gl, file) {
 
 		void main(void) {
 			gl_FragColor = texture2D(diffuse, vTexCoord);
+			// gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
 		}
 	`;
 
@@ -59,18 +60,14 @@ function createImage(gl, file) {
 		-1, -1,   0, 1,
 	]), gl.STATIC_DRAW);
 
-	// gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
-	// gl.clearColor(0, 0, 0, 0);
-	// gl.clear(gl.COLOR_BUFFER_BIT);
-
-	gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 16, 0);
+	gl.clearColor(0, 0, 0, 0);
 
 	gl.enableVertexAttribArray(0);
-
-	gl.vertexAttribPointer(1, 2, gl.FLOAT, false, 16, 8);
 	gl.enableVertexAttribArray(1);
-
+	gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 16, 0);
+	gl.vertexAttribPointer(1, 2, gl.FLOAT, false, 16, 8);
 	gl.uniform1i(gl.getUniformLocation(program, 'diffuse'), 0);
 
+	gl.clear(gl.COLOR_BUFFER_BIT);
 	gl.drawArrays(gl.TRIANGLES, 0, 6);
 }
