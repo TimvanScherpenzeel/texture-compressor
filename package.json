@@ -1,6 +1,6 @@
 {
   "name": "texture-compressor",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR containers.",
   "main": "index.js",
   "scripts": {
