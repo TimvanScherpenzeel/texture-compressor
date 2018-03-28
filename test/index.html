@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Texture handler</title>
+	<style>
+		body, html {
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			background: #fefefe;
+		}
+
+		#app {
+			padding-left: 25px;
+		}
+
+		canvas {
+			margin: 10px 0 20px 0;
+			padding: 0px;
+			border: 1px solid red;
+			display: block;
+			max-width: 250px;
+		}
+	</style>
+</head>
+<body>
+    <div id="app">
+		<h1>Texture handler</h1>
+		<section class="s3tc">
+			<h3>S3TC</h3>
+			<div class="gallery-item" id="DXT1">DXT1</div>
+			<div class="gallery-item" id="DXT3">DXT3</div>
+			<div class="gallery-item" id="DXT5">DXT5</div>
+		</section>
+
+		<section class="etc1">
+			<h3>ETC1</h3>
+			<div class="gallery-item" id="ETC1_RGB">ETC1_RGB</div>
+		</section>
+
+		<section class="etc2">
+			<h3>ETC2</h3>
+			<div class="gallery-item" id="ETC2_RGB">ETC2_RGB</div>
+			<div class="gallery-item" id="ETC2_RGBA">ETC2_RGBA</div>
+		</section>
+
+		<section class="pvrtc">
+			<h3>PVRTC</h3>
+			<div class="gallery-item" id="PVRTC_RGB_2BPP">PVRTC_RGB_2BPP</div>
+			<div class="gallery-item" id="PVRTC_RGBA_2BPP">PVRTC_RGBA_2BPP</div>
+			<div class="gallery-item" id="PVRTC_RGB_4BPP">PVRTC_RGB_4BPP</div>
+			<div class="gallery-item" id="PVRTC_RGBA_4BPP">PVRTC_RGB_4BPP</div>
+		</section>
+	</div>
+
+	<script src="./fileLoader.js"></script>
+	<script src="./parseDDS.js"></script>
+	<script src="./parsePVR.js"></script>
+	<script src="./parseBinary.js"></script>
+	<script src="./loadBinary.js"></script>
+	<script src="./webGLUtilities.js"></script>
+    <script>
+		// Initialize
+		// ----------
+		function initialize() {
+			const app = document.getElementById('app');
+
+			const result = Promise.all([
+				loadBinary('./../example/example-dxt1.dds'),
+				loadBinary('./../example/example-dxt3.dds'),
+				loadBinary('./../example/example-dxt5.dds'),
+				loadBinary('./../example/example-etc1.pvr'),
+				loadBinary('./../example/example-etc2.pvr'),
+				loadBinary('./../example/example-pvrtc1.pvr'),
+			]);
+
+			result
+				.then((data) => {
+					data.map((file) => {
+						const element = document.getElementById(`${file.type}`);
+						const canvas = document.createElement('canvas');
+						canvas.width = file.width;
+						canvas.height = file.height;
+						const gl = canvas.getContext('webgl');
+
+						// Get extension to match file
+						const extension = gl.getExtension(`WEBGL_compressed_texture_${file.compression}`);
+
+						if (extension) {
+							element.appendChild(canvas);
+							createImage(gl, file);
+						} else {
+							console.log(`WEBGL_compressed_texture_${file.compression} extension is not available - ${file.type}`);
+						}
+					});
+				});
+		}
+
+		initialize();
+    </script>
+</body>
+</html>
