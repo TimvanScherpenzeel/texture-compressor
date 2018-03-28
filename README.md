@@ -36,6 +36,8 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-as
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
 
 $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc1.pvr -m etc -c etc1
+
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc2.pvr -m etc -c etc2
 ```
 
 ### PVR
@@ -56,6 +58,10 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-pv
 # Crunch - https://code.google.com/archive/p/crunch/
 # DDS container
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
+
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt1.dds -m s3tc -c dxt1
+
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt3.dds -m s3tc -c dxt3
 
 $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
 ```
