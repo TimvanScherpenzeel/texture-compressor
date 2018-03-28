@@ -20,7 +20,7 @@ $ npm install -g --save texture-compressor
 
 ```sh
 # ASTC - Supported by all iOS devices with an A8 processor or higher (iPhone 6+)
-# PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
+# Astcenc - https://github.com/ARM-software/astc-encoder
 # PVR container
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
