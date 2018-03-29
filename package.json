@@ -24,10 +24,6 @@
     "eslint-plugin-import": "^2.8.0",
     "http-server": "^0.11.1"
   },
-  "directories": {
-    "doc": "docs",
-    "lib": "lib"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TimvanScherpenzeel/texture-compressor.git"
