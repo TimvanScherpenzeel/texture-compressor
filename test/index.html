@@ -30,6 +30,11 @@
 <body>
     <div id="app">
 		<h1>Texture handler</h1>
+		<section class="astc">
+			<h3>ASTC</h3>
+			<div class="gallery-item" id="ASTC">ASTC</div>
+		</section>
+
 		<section class="s3tc">
 			<h3>S3TC</h3>
 			<div class="gallery-item" id="DXT1">DXT1</div>
@@ -58,6 +63,7 @@
 	</div>
 
 	<script src="./fileLoader.js"></script>
+	<script src="./parseASTC.js"></script>
 	<script src="./parseDDS.js"></script>
 	<script src="./parsePVR.js"></script>
 	<script src="./parseBinary.js"></script>
@@ -70,7 +76,7 @@
 			const app = document.getElementById('app');
 
 			const result = Promise.all([
-				loadBinary('./../example/example-astc.dds'),
+				loadBinary('./../example/example-astc.astc'),
 				loadBinary('./../example/example-dxt1.dds'),
 				loadBinary('./../example/example-dxt3.dds'),
 				loadBinary('./../example/example-dxt5.dds'),

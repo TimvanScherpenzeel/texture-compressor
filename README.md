@@ -14,6 +14,20 @@ Easily compress for all hardware using sensible defaults but with the option to 
 $ npm install -g --save texture-compressor
 ```
 
+## Support table
+// astc
+// no etc2, sometimes etc1
+
+// Firefox on S8 has etc1 and etc2 but no astc
+// Chrome on S8 has etc1 and astc
+
+// Firefox on S6 has etc1 and etc2 but no astc
+// Chrome on S6 has etc1 and astc
+
+Android has ASTC (Chrome), ETC1 (Chrome) and ETC2 (Firefox)
+iOS has PVRTC
+Desktop devices and browsers have S3TC (DXT1, DXT3, DXT5)
+
 ## Example
 
 ### ASTC

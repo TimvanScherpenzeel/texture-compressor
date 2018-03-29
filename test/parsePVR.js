@@ -4,7 +4,7 @@ function parsePVR(buffer) {
 	// WEBGL_compressed_texture_etc
 	// WEBGL_compressed_texture_pvrtc
 
-	// PVR
+	// PVR CONSTANTS
 	const PVR_HEADER_LENGTH = 13;
 	const PVR_MAGIC = 0x03525650;
 	const PVR_HEADER_MAGIC = 0;
@@ -120,5 +120,5 @@ function parsePVR(buffer) {
 		format,
 		type,
 		data,
-	}
+	};
 }

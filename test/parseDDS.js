@@ -2,7 +2,7 @@ function parseDDS(buffer) {
 	// Supports DXT1, DXT3, DXT5
 	// WEBGL_compressed_texture_s3tc
 
-	// DDS
+	// DDS CONSTANTS
 	const DDS_HEADER_MAGIC = 0;
 	const DDS_HEADER_SIZE = 1;
 	const DDS_HEADER_FLAGS = 2;
@@ -75,5 +75,5 @@ function parseDDS(buffer) {
 		format,
 		type,
 		data,
-	}
+	};
 }

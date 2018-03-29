@@ -3,12 +3,14 @@ function parseBinary(filename, bin) {
 
 	let result;
 
-	if (containerType === 'dds') {
+	if (containerType === 'astc') {
+		result = parseASTC(bin);
+	} else if (containerType === 'dds') {
 		result = parseDDS(bin);
 	} else if (containerType === 'pvr') {
 		result = parsePVR(bin);
 	} else {
-		console.error('Filename should have a .dds or .pvr extension');
+		console.error('Output filename should have a .astc, .dds or .pvr extension');
 	}
 
 	return result;
