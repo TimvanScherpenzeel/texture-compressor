@@ -1,7 +1,6 @@
 function parseDDS(buffer) {
 	// Supports DXT1, DXT3, DXT5
 	// WEBGL_compressed_texture_s3tc
-	// WEBGL_compressed_texture_s3tc_srgb
 
 	// DDS
 	const DDS_HEADER_MAGIC = 0;
@@ -10,7 +9,7 @@ function parseDDS(buffer) {
 	const DDS_HEADER_HEIGHT = 3;
 	const DDS_HEADER_WIDTH = 4;
 	const DDS_HEADER_MIPMAPCOUNT = 7;
-	const DDS_HEADER_LENGTH = 31 // 32 bits
+	const DDS_HEADER_LENGTH = 31; // 32 bits
 	const DDSD_MIPMAPCOUNT = 0x20000;
 	const DDS_MAGIC = 0x20534444;
 	const DDS_PIXEL_FORMAT_FOURCC = 0x4;
@@ -43,7 +42,7 @@ function parseDDS(buffer) {
 	let format;
 	let type;
 
-	switch(fileType) {
+	switch (fileType) {
 		case FOURCC_TYPE_DXT1:
 			format = COMPRESSED_RGB_S3TC_DXT1_EXT;
 			type = 'DXT1';

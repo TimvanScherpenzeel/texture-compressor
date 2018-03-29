@@ -70,6 +70,7 @@
 			const app = document.getElementById('app');
 
 			const result = Promise.all([
+				loadBinary('./../example/example-astc.dds'),
 				loadBinary('./../example/example-dxt1.dds'),
 				loadBinary('./../example/example-dxt3.dds'),
 				loadBinary('./../example/example-dxt5.dds'),
