@@ -1,7 +1,7 @@
 {
   "name": "texture-compressor",
   "version": "0.0.8",
-  "description": "CLI tool for texture compression using ETC, PVRTC and S3TC in DDS or PVR containers.",
+  "description": "CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR containers.",
   "main": "index.js",
   "scripts": {
     "start": "http-server --cors -s -o",
