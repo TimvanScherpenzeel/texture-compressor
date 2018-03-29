@@ -15,64 +15,93 @@ $ npm install -g --save texture-compressor
 ```
 
 ## Support table
-// astc
-// no etc2, sometimes etc1
 
-// Firefox on S8 has etc1 and etc2 but no astc
-// Chrome on S8 has etc1 and astc
-
-// Firefox on S6 has etc1 and etc2 but no astc
-// Chrome on S6 has etc1 and astc
-
-Android has ASTC (Chrome), ETC1 (Chrome) and ETC2 (Firefox)
-iOS has PVRTC
-Desktop devices and browsers have S3TC (DXT1, DXT3, DXT5)
+| Device                         | Device vendor | Device model | OS      | OS version | Browser       | Browser version | WebGL | WebGL2 | ASTC | ATC | ETC | ETC1 | S3TC | PVRTC |
+| ------------------------------ | ------------- | ------------ | ------- | ---------- | ------------- | --------------- | ----- | ------ | ---- | --- | --- | ---- | ---- | ----- |
+| Apple-iPad 5th-Safari          | Apple         | iPad         | iOS     | 11.0.3     | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
+| Apple-iPad Air 2-Safari        | Apple         | iPad         | iOS     | 8.4        | Mobile Safari | 8.0             | X     |        |      |     |     |      |      | X     |
+| Apple-iPad Mini 3-Safari       | Apple         | iPad         | iOS     | 8.1.2      | Mobile Safari | 8.0             | X     |        |      |     |     |      |      | X     |
+| Apple-iPad Pro-Safari          | Apple         | iPad         | iOS     | 11.2.1     | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
+| Apple-iPhone 5S-Safari         | Apple         | iPhone       | iOS     | 8.1.3      | Mobile Safari | 8.0             | X     |        |      |     |     |      |      | X     |
+| Apple-iPhone 6 Plus-Safari     | Apple         | iPhone       | iOS     | 8.1        | Mobile Safari | 8.0             | X     |        |      |     |     |      |      | X     |
+| Apple-iPhone 6-Safari          | Apple         | iPhone       | iOS     | 8.1.3      | Mobile Safari | 8.0             | X     |        |      |     |     |      |      | X     |
+| Apple-iPhone 6S Plus-Safari    | Apple         | iPhone       | iOS     | 9.0.1      | Mobile Safari | 9.0             | X     |        |      |     |     |      |      | X     |
+| Apple-iPhone 6S-Safari         | Apple         | iPhone       | iOS     | 9.1        | Mobile Safari | 9.0             | X     |        |      |     |     |      |      | X     |
+| Apple-iPhone 7-Safari          | Apple         | iPhone       | iOS     | 10.3.1     | Mobile Safari | 10.0            | X     |        |      |     |     |      |      | X     |
+| Apple-iPhone 8 Plus-Safari     | Apple         | iPhone       | iOS     | 11.0       | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
+| Apple-iPhone 8-Safari          | Apple         | iPhone       | iOS     | 11.0       | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
+| Apple-iPhone SE-Safari         | Apple         | iPhone       | iOS     | 11.2.1     | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
+| Apple-iPhone X-Safari          | Apple         | iPhone       | iOS     | 11.2       | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
+| Google-Nexus 5X-Chrome         | LG            | Nexus 5      | Android | 7.0        | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
+| Google-Nexus 6P-Chrome         | Huawei        | Nexus 6P     | Android | 7.0        | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
+| Google-Pixel 2-Chrome          | Google        | Pixel        | Android | 8.0.0      | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
+| Google-Pixel 2-Firefox         | Unknown       | Unknown      | Android | 8.0.0      | Firefox       | 51.0            | X     | X      |      | X   | X   | X    |      |       |
+| Google-Pixel v7-Chrome         | Google        | Pixel        | Android | 7.1        | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
+| Google-Pixel v8-Chrome         | Google        | Pixel        | Android | 8.0.0      | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
+| Google-Pixel v8-Firefox        | Unknown       | Unknown      | Android | 8.0.0      | Firefox       | 51.0            | X     | X      |      | X   | X   | X    |      |       |
+| LG-G5-Chrome                   | LG            | H850         | Android | 6.0.1      | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
+| MacOS-High Sierra-Chrome       | Unknown       | Unknown      | Mac OS  | 10.13.3    | Chrome        | 65.0.3325.181   | X     | X      |      |     |     |      | X    |       |
+| MacOS-High Sierra-Firefox      | Unknown       | Unknown      | Mac OS  | 10.13      | Firefox       | 59.0            | X     | X      |      |     |     |      | X    |       |
+| MacOS-High Sierra-Safari       | Unknown       | Unknown      | Mac OS  | 10.13.3    | Safari        | 11.0.3          | X     |        |      |     |     |      | X    |       |
+| Motorola-Moto X 2nd Gen-Chrome | Motorola      | XT1092       | Android | 6.0        | Chrome        | 63.0.3239.111   | X     |        |      | X   |     | X    |      |       |
+| Samsung-S6-Chrome              | Samsung       | SM-G920F     | Android | 5.0.2      | Chrome        | 63.0.3239.111   | X     | X      | X    |     |     | X    |      |       |
+| Samsung-S7-Chrome              | Samsung       | SM-G930F     | Android | 6.0.1      | Chrome        | 63.0.3239.111   | X     | X      | X    |     |     | X    |      |       |
+| Samsung-S7-Firefox             | Unknown       | Unknown      | Android | 6.0.1      | Firefox       | 51.0            | X     | X      |      |     | X   | X    |      |       |
+| Samsung-S8-Chrome              | Samsung       | SM-G950F     | Android | 7.0        | Chrome        | 63.0.3239.111   | X     | X      | X    |     |     | X    |      |       |
+| Samsung-S8-Firefox             | Unknown       | Unknown      | Android | 7.0        | Firefox       | 51.0            | X     | X      |      |     | X   | X    |      |       |
+| Samsung-S8+-Chrome             | Samsung       | SM-G955F     | Android | 7.0        | Chrome        | 63.0.3239.111   | X     | X      | X    |     |     | X    |      |       |
+| Samsung-S8+-Firefox            | Unknown       | Unknown      | Android | 7.0        | Firefox       | 51.0            | X     | X      |      |     | X   | X    |      |       |
+| Windows 10-Chrome              | Unknown       | Unknown      | Windows | 10         | Chrome        | 65.0.3325.146   | X     | X      |      |     |     | X    | X    |       |
+| Windows 10-Edge 14             | Unknown       | Unknown      | Windows | 10         | Edge          | 14.14393        | X     |        |      |     |     |      | X    |       |
+| Windows 10-Edge 15             | Unknown       | Unknown      | Windows | 10         | Edge          | 15.15063        | X     |        |      |     |     |      | X    |       |
+| Windows 10-Edge 16             | Unknown       | Unknown      | Windows | 10         | Edge          | 16.16299        | X     |        |      |     |     |      | X    |       |
+| Windows 10-Firefox             | Unknown       | Unknown      | Windows | 10         | Firefox       | 59.0            | X     |        |      |     |     |      | X    |       |
+| Windows 10-IE 11               | Unknown       | Unknown      | Windows | 10         | IE            | 11.0            | X     |        |      |     |     |      | X    |       |
+| Windows 7-IE 10                | Unknown       | Unknown      | Windows | 7          | IE            | 10.0            |       |        |      |     |     |      |      |       |
+| Windows 7-IE 11                | Unknown       | Unknown      | Windows | 7          | IE            | 11.0            | X     |        |      |     |     |      | X    |       |
+| Windows 8-IE 10                | Unknown       | Unknown      | Windows | 8          | IE            | 10.0            |       |        |      |     |     |      |      |       |
 
 ## Example
 
 ### ASTC
 ```sh
 # Astcenc - https://github.com/ARM-software/astc-encoder
-# DDS container
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-astc.ktx -m astc -c astc
 ```
 
 ### ETC
 
 ```sh
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
-# PVR container
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc1.pvr -m etc -c etc1
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc1.ktx -m etc -c etc1
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc2.pvr -m etc -c etc2
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc2.ktx -m etc -c etc2
 ```
 
 ### PVR
 
 ```sh
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
-# PVR container
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-pvrtc1.pvr -m pvr -c pvrtc1
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-pvrtc1.ktx -m pvr -c pvrtc1
 ```
 
 ### S3TC
 
 ```sh
 # Crunch - https://code.google.com/archive/p/crunch/
-# DDS container
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt1.dds -m s3tc -c dxt1
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt1.ktx -m s3tc -c dxt1
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt3.dds -m s3tc -c dxt3
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt3.ktx -m s3tc -c dxt3
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt5.dds -m s3tc -c dxt5
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt5.ktx -m s3tc -c dxt5
 ```
 
 ## Flags
