@@ -4,7 +4,7 @@
 [![dependencies](https://david-dm.org/timvanscherpenzeel/texture-compressor.svg)](https://david-dm.org/timvanscherpenzeel/texture-compressor)
 [![devDependencies](https://david-dm.org/timvanscherpenzeel/texture-compressor/dev-status.svg)](https://david-dm.org/timvanscherpenzeel/texture-compressor#info=devDependencies)
 
-CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR containers.
+CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in a KTX container.
 
 Easily compress for all hardware using sensible defaults but with the option to pass any custom flag directly to the tool.
 
@@ -109,7 +109,7 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dx
 ### Required
 	-c, --compression ['astc', 'etc1', 'etc2', 'pvrtc1', 'dxt1', 'dxt3', 'dxt5'] [required]
 	-i, --input [example: ./example/example.png] [required]
-	-o, --output [example: ./example/example.dds] [required]
+	-o, --output [example: ./example/example.ktx] [required]
 	-m, --method ['etc', 'pvr', 's3tc'] [required]
 
 ### Optional

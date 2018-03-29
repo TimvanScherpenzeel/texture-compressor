@@ -63,9 +63,7 @@
 	</div>
 
 	<script src="./fileLoader.js"></script>
-	<script src="./parseASTC.js"></script>
-	<script src="./parseDDS.js"></script>
-	<script src="./parsePVR.js"></script>
+	<script src="./parseKTX.js"></script>
 	<script src="./parseBinary.js"></script>
 	<script src="./loadBinary.js"></script>
 	<script src="./webGLUtilities.js"></script>
@@ -76,13 +74,13 @@
 			const app = document.getElementById('app');
 
 			const result = Promise.all([
-				loadBinary('./../example/example-astc.astc'),
-				loadBinary('./../example/example-dxt1.dds'),
-				loadBinary('./../example/example-dxt3.dds'),
-				loadBinary('./../example/example-dxt5.dds'),
-				loadBinary('./../example/example-etc1.pvr'),
-				loadBinary('./../example/example-etc2.pvr'),
-				loadBinary('./../example/example-pvrtc1.pvr'),
+				loadBinary('./../example/example-astc.ktx'),
+				loadBinary('./../example/example-dxt1.ktx'),
+				loadBinary('./../example/example-dxt3.ktx'),
+				loadBinary('./../example/example-dxt5.ktx'),
+				loadBinary('./../example/example-etc1.ktx'),
+				loadBinary('./../example/example-etc2.ktx'),
+				loadBinary('./../example/example-pvrtc1.ktx'),
 			]);
 
 			const pixelRatio = window.devicePixelRatio;
