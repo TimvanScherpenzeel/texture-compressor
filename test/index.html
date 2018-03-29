@@ -102,7 +102,10 @@
 						gl.scissor(0, 0, file.width * pixelRatio, file.height * pixelRatio);
 
 						// Get extension to match file
-						const extension = gl.getExtension(`WEBGL_compressed_texture_${file.compression}`);
+						const extension =
+							gl.getExtension(`WEBGL_compressed_texture_${file.compression}`) ||
+							gl.getExtension(`WEBKIT_WEBGL_compressed_texture_${file.compression}`) ||
+							gl.getExtension(`MOZ_WEBGL_compressed_texture_${file.compression}`);
 
 						if (extension) {
 							element.appendChild(canvas);
