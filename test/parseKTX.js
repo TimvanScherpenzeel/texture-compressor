@@ -32,7 +32,7 @@ function parseKTX(buffer, facesExpected = 1) {
 	let numberOfMipmapLevels = header[11];
 	const bytesOfKeyValueData = header[12];
 
-	console.log(glInternalFormat);
+	console.log(glTypeSize);
 
 	if (glType !== 0) {
 		console.error('Only compressed formats are supported');
@@ -52,7 +52,9 @@ function parseKTX(buffer, facesExpected = 1) {
 		console.error(`Number of faces expected ${facesExpected} but found ${numberOfFaces}`);
 	}
 
-	return 'ktx';
+	return {
+		compression: glInternalFormat,
+	};
 
 	// 	compression,
 	// 	mipMapLevels,
