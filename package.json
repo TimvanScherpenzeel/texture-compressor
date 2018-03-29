@@ -16,6 +16,7 @@
   "dependencies": {
     "argparse": "^1.0.9",
     "bluebird": "^3.5.1",
+    "fs-extra": "^5.0.0",
     "image-size": "^0.6.1"
   },
   "devDependencies": {
