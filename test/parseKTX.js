@@ -109,65 +109,116 @@ function parseKTX(buffer, facesExpected = 1) {
 		console.error(`Number of faces expected ${facesExpected} but found ${numberOfFaces}`);
 	}
 
+	let id;
 	let compression;
 
 	switch (glInternalFormat) {
 		// https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 		case COMPRESSED_RGBA_ASTC_4x4_KHR:
+			id = 'ASTC_RGBA_4x4';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_5x4_KHR:
+			id = 'ASTC_RGBA_5x4';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_5x5_KHR:
+			id = 'ASTC_RGBA_5x5';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_6x5_KHR:
+			id = 'ASTC_RGBA_6x5';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_6x6_KHR:
+			id = 'ASTC_RGBA_6x6';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_8x5_KHR:
+			id = 'ASTC_RGBA_8x5';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_8x6_KHR:
+			id = 'ASTC_RGBA_8x6';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_8x8_KHR:
+			id = 'ASTC_RGBA_8x8';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_10x5_KHR:
+			id = 'ASTC_RGBA_10x5';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_10x6_KHR:
+			id = 'ASTC_RGBA_10x6';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_10x8_KHR:
+			id = 'ASTC_RGBA_10x8';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_10x10_KHR:
+			id = 'ASTC_RGBA_10x10';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_12x10_KHR:
+			id = 'ASTC_RGBA_12x10';
+			compression = 'astc';
+			break;
+
 		case COMPRESSED_RGBA_ASTC_12x12_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR:
-		case COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR:
+			id = 'ASTC_RGBA_12x12';
 			compression = 'astc';
 			break;
 
 		// https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
-		case COMPRESSED_R11_EAC:
-		case COMPRESSED_SIGNED_R11_EAC:
-		case COMPRESSED_RG11_EAC:
-		case COMPRESSED_SIGNED_RG11_EAC:
 		case COMPRESSED_RGB8_ETC2:
-		case COMPRESSED_SRGB8_ETC2:
-		case COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2:
-		case COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2:
+			id = 'ETC2_RGB';
+			compression = 'etc';
+			break;
+
 		case COMPRESSED_RGBA8_ETC2_EAC:
-		case COMPRESSED_SRGB8_ALPHA8_ETC2_EAC:
+			id = 'ETC2_RGBA';
 			compression = 'etc';
 			break;
 
 		// https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc1/
 		case COMPRESSED_RGB_ETC1_WEBGL:
+			id = 'ETC1_RGB';
 			compression = 'etc1';
 			break;
 
 		// https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
 		case COMPRESSED_RGB_S3TC_DXT1_EXT:
+			id = 'DXT1_RGB';
+			compression = 's3tc';
+			break;
+
 		case COMPRESSED_RGBA_S3TC_DXT1_EXT:
+			id = 'DXT1_RGBA';
+			compression = 's3tc';
+			break;
+
 		case COMPRESSED_RGBA_S3TC_DXT3_EXT:
+			id = 'DXT3_RGBA';
+			compression = 's3tc';
+			break;
+
 		case COMPRESSED_RGBA_S3TC_DXT5_EXT:
+			id = 'DXT5_RGBA';
 			compression = 's3tc';
 			break;
 
@@ -184,11 +235,12 @@ function parseKTX(buffer, facesExpected = 1) {
 			break;
 	}
 
-	console.log(compression);
-
 	return {
+		id,
 		compression,
-		type: glInternalFormat,
+		width: pixelWidth,
+		height: pixelHeight,
+		format: glInternalFormat,
 	};
 
 	// return 'ktx';

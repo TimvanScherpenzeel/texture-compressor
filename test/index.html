@@ -32,33 +32,47 @@
 		<h1>Texture handler</h1>
 		<section class="astc">
 			<h3>ASTC</h3>
-			<div class="gallery-item" id="ASTC">ASTC</div>
+			<div class="gallery-item" id="ASTC_RGBA_4x4">ASTC 4x4 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_5x4">ASTC 5x4 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_5x5">ASTC 5x5 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_6x5">ASTC 6x5 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_6x6">ASTC 6x6 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_8x5">ASTC 8x5 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_8x6">ASTC 8x6 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_8x8">ASTC 8x8 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_10x5">ASTC 10x5 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_10x6">ASTC 10x6 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_10x8">ASTC 10x8 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_10x10">ASTC 10x10 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_12x10">ASTC 12x10 (RGBA)</div>
+			<div class="gallery-item" id="ASTC_RGBA_12x12">ASTC 12x12 (RGBA)</div>
 		</section>
 
 		<section class="s3tc">
 			<h3>S3TC</h3>
-			<div class="gallery-item" id="DXT1">DXT1</div>
-			<div class="gallery-item" id="DXT3">DXT3</div>
-			<div class="gallery-item" id="DXT5">DXT5</div>
+			<div class="gallery-item" id="DXT1_RGB">DXT1 (RGBA)</div>
+			<div class="gallery-item" id="DXT1_RGBA">DXT1 (RGBA)</div>
+			<div class="gallery-item" id="DXT3_RGBA">DXT3 (RGBA)</div>
+			<div class="gallery-item" id="DXT5_RGBA">DXT5 (RGBA)</div>
 		</section>
 
 		<section class="etc1">
 			<h3>ETC1</h3>
-			<div class="gallery-item" id="ETC1_RGB">ETC1_RGB</div>
+			<div class="gallery-item" id="ETC1_RGB">ETC1 (RGB)</div>
 		</section>
 
 		<section class="etc2">
 			<h3>ETC2</h3>
-			<div class="gallery-item" id="ETC2_RGB">ETC2_RGB</div>
-			<div class="gallery-item" id="ETC2_RGBA">ETC2_RGBA</div>
+			<div class="gallery-item" id="ETC2_RGB">ETC2 (RGB)</div>
+			<div class="gallery-item" id="ETC2_RGBA">ETC2 (RGBA)</div>
 		</section>
 
 		<section class="pvrtc">
 			<h3>PVRTC</h3>
-			<div class="gallery-item" id="PVRTC_RGB_2BPP">PVRTC_RGB_2BPP</div>
-			<div class="gallery-item" id="PVRTC_RGBA_2BPP">PVRTC_RGBA_2BPP</div>
-			<div class="gallery-item" id="PVRTC_RGB_4BPP">PVRTC_RGB_4BPP</div>
-			<div class="gallery-item" id="PVRTC_RGBA_4BPP">PVRTC_RGB_4BPP</div>
+			<div class="gallery-item" id="PVRTC_RGB_2BPP">PVRTC 2BPP (RGB)</div>
+			<div class="gallery-item" id="PVRTC_RGBA_2BPP">PVRTC 2BPP (RGBA)</div>
+			<div class="gallery-item" id="PVRTC_RGB_4BPP">PVRTC 4BPP (RGB)</div>
+			<div class="gallery-item" id="PVRTC_RGBA_4BPP">PVRTC 4BPP (RGBA)</div>
 		</section>
 	</div>
 
@@ -88,7 +102,7 @@
 			result
 				.then((data) => {
 					data.map((file) => {
-						const element = document.getElementById(`${file.type}`);
+						const element = document.getElementById(`${file.id}`);
 						const canvas = document.createElement('canvas');
 						const gl = canvas.getContext('webgl');
 
@@ -107,13 +121,11 @@
 							gl.getExtension(`WEBKIT_WEBGL_compressed_texture_${file.compression}`) ||
 							gl.getExtension(`MOZ_WEBGL_compressed_texture_${file.compression}`);
 
-						console.log(file.type);
-
 						if (extension) {
 							element.appendChild(canvas);
 							createImage(gl, file);
 						} else {
-							console.log(`WEBGL_compressed_texture_${file.compression} extension is not available - ${file.type}`);
+							console.log(`WEBGL_compressed_texture_${file.compression} extension is not available - ${file.format}`);
 						}
 					});
 				});
