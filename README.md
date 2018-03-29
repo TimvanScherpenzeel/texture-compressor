@@ -17,20 +17,17 @@ $ npm install -g --save texture-compressor
 ## Example
 
 ### ASTC
-
 ```sh
-# ASTC - Supported by all iOS devices with an A8 processor or higher (iPhone 6+)
 # Astcenc - https://github.com/ARM-software/astc-encoder
-# PVR container
+# DDS container
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-astc.pvr -m astc -c astc
+$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-astc.dds -m astc -c astc
 ```
 
 ### ETC
 
 ```sh
-# ETC1 & ETC2 - Supported by most Android devices
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
 # PVR container
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
@@ -43,7 +40,6 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-et
 ### PVR
 
 ```sh
-# PVRTC1 - Supported by all iOS devices and some Android devices
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
 # PVR container
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
@@ -54,7 +50,6 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-pv
 ### S3TC
 
 ```sh
-# DXT1 & DXT3 & DXT5 - Supported by all desktop devices and some Android devices
 # Crunch - https://code.google.com/archive/p/crunch/
 # DDS container
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
@@ -72,7 +67,7 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dx
 	-c, --compression ['astc', 'etc1', 'etc2', 'pvrtc1', 'dxt1', 'dxt3', 'dxt5'] [required]
 	-i, --input [example: ./example/example.png] [required]
 	-o, --output [example: ./example/example.dds] [required]
-	-m, --method ['astc', 'etc', 'pvr', 's3tc'] [required]
+	-m, --method ['etc', 'pvr', 's3tc'] [required]
 
 ### Optional
 	-b, --bitrate [2.0 - 4.0, default: 2.0 = 8x8 blocksize] [not required]
