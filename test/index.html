@@ -107,6 +107,8 @@
 							gl.getExtension(`WEBKIT_WEBGL_compressed_texture_${file.compression}`) ||
 							gl.getExtension(`MOZ_WEBGL_compressed_texture_${file.compression}`);
 
+						console.log(file.type);
+
 						if (extension) {
 							element.appendChild(canvas);
 							createImage(gl, file);

@@ -186,11 +186,12 @@ function parseKTX(buffer, facesExpected = 1) {
 
 	console.log(compression);
 
-	// return {
-		// compression,
-	// };
+	return {
+		compression,
+		type: glInternalFormat,
+	};
 
-	return 'ktx';
+	// return 'ktx';
 
 	// 	compression,
 	// 	mipMapLevels,
