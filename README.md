@@ -14,6 +14,14 @@ Easily compress for all hardware using sensible defaults but with the option to 
 $ npm install -g --save texture-compressor
 ```
 
+## Live demo
+
+[Live demo](https://timvanscherpenzeel.github.io/texture-compressor/)
+
+## Docs
+
+The source code of the `KTX loader` is available on in [docs/main.js](https://github.com/TimvanScherpenzeel/texture-compressor/blob/master/docs/main.js) in the `docs` folder.
+
 ## Support table
 
 | Device                  | OS      | OS version | Browser       | Browser version | ASTC | ETC | ETC1 | S3TC | PVRTC |
