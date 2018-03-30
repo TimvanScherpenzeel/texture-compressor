@@ -1,9 +1,10 @@
 {
   "name": "texture-compressor",
   "version": "0.0.8",
-  "description": "CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in DDS or PVR containers.",
+  "description": "CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in a KTX container.",
   "main": "index.js",
   "scripts": {
+    "start": "http-server --cors -s -o",
     "lint": "eslint lib/**/*.js",
     "deploy": "npm version patch && npm publish && git push origin"
   },
@@ -15,16 +16,16 @@
   "dependencies": {
     "argparse": "^1.0.9",
     "bluebird": "^3.5.1",
-    "image-size": "^0.6.1"
+    "fs-extra": "^5.0.0",
+    "image-size": "^0.6.1",
+    "jimp": "^0.2.28",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "eslint": "^4.13.1",
     "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0"
-  },
-  "directories": {
-    "doc": "docs",
-    "lib": "lib"
+    "eslint-plugin-import": "^2.8.0",
+    "http-server": "^0.11.1"
   },
   "repository": {
     "type": "git",
