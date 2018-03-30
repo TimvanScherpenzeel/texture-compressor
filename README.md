@@ -76,7 +76,7 @@ The source code of the `KTX loader` is available on in [docs/main.js](https://gi
 # Astcenc - https://github.com/ARM-software/astc-encoder
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-astc.ktx -m astc -c astc
+$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc.ktx -m astc -c astc
 ```
 
 ### ETC
@@ -85,9 +85,9 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-as
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc1.ktx -m etc -c etc1
+$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-etc1.ktx -m etc -c etc1
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-etc2.ktx -m etc -c etc2
+$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-etc2.ktx -m etc -c etc2
 ```
 
 ### PVR
@@ -96,7 +96,7 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-et
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-pvrtc1.ktx -m pvr -c pvrtc1
+$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-pvrtc1.ktx -m pvr -c pvrtc1
 ```
 
 ### S3TC
@@ -105,19 +105,19 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-pv
 # Crunch - https://code.google.com/archive/p/crunch/
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt1.ktx -m s3tc -c dxt1
+$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-dxt1.ktx -m s3tc -c dxt1
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt3.ktx -m s3tc -c dxt3
+$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-dxt3.ktx -m s3tc -c dxt3
 
-$ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dxt5.ktx -m s3tc -c dxt5
+$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-dxt5.ktx -m s3tc -c dxt5
 ```
 
 ## Flags
 
 ### Required
 	-c, --compression ['astc', 'etc1', 'etc2', 'pvrtc1', 'dxt1', 'dxt3', 'dxt5'] [required]
-	-i, --input [example: ./example/example.png] [required]
-	-o, --output [example: ./example/example.ktx] [required]
+	-i, --input [example: ./docs/example/example.png] [required]
+	-o, --output [example: ./docs/example/example.ktx] [required]
 	-m, --method ['astc', 'etc', 'pvr', 's3tc'] [required]
 
 ### Optional
