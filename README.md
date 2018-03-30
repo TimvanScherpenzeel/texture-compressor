@@ -110,7 +110,7 @@ $ node ./bin/texture-compressor -i ./example/example.png -o ./example/example-dx
 	-c, --compression ['astc', 'etc1', 'etc2', 'pvrtc1', 'dxt1', 'dxt3', 'dxt5'] [required]
 	-i, --input [example: ./example/example.png] [required]
 	-o, --output [example: ./example/example.ktx] [required]
-	-m, --method ['etc', 'pvr', 's3tc'] [required]
+	-m, --method ['astc', 'etc', 'pvr', 's3tc'] [required]
 
 ### Optional
 	-b, --bitrate [2.0 - 4.0, default: 2.0 = 8x8 blocksize] [not required]
