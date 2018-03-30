@@ -47,20 +47,20 @@ function parseKTX(buffer) {
 	var COMPRESSED_RGBA_ASTC_10x10_KHR = 0x93BB;
 	var COMPRESSED_RGBA_ASTC_12x10_KHR = 0x93BC;
 	var COMPRESSED_RGBA_ASTC_12x12_KHR = 0x93BD;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 0x93D0;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 0x93D1;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 0x93D2;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 0x93D3;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 0x93D4;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 0x93D5;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 0x93D6;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 0x93D7;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 0x93D8;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 0x93D9;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 0x93DA;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 0x93DB;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 0x93DC;
-	var COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 0x93DD;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 0x93D0;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 0x93D1;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 0x93D2;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 0x93D3;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 0x93D4;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 0x93D5;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 0x93D6;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 0x93D7;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 0x93D8;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 0x93D9;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 0x93DA;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 0x93DB;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 0x93DC;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 0x93DD;
 
 	// https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
 	var COMPRESSED_R11_EAC = 0x9270;
@@ -379,7 +379,7 @@ function createImage(gl, file) {
 function initialize() {
 	var app = document.getElementById('app');
 
-	var result = Promise.all([loadBinary('./../example/example-astc.ktx'), loadBinary('./../example/example-dxt1.ktx'), loadBinary('./../example/example-dxt3.ktx'), loadBinary('./../example/example-dxt5.ktx'), loadBinary('./../example/example-etc1.ktx'), loadBinary('./../example/example-etc2.ktx'), loadBinary('./../example/example-pvrtc1.ktx')]);
+	var result = Promise.all([loadBinary('./../example/example-astc-4x4.ktx'), loadBinary('./../example/example-astc-5x4.ktx'), loadBinary('./../example/example-astc-5x5.ktx'), loadBinary('./../example/example-astc-6x5.ktx'), loadBinary('./../example/example-astc-6x6.ktx'), loadBinary('./../example/example-astc-8x5.ktx'), loadBinary('./../example/example-astc-8x6.ktx'), loadBinary('./../example/example-astc-8x8.ktx'), loadBinary('./../example/example-astc-10x5.ktx'), loadBinary('./../example/example-astc-10x6.ktx'), loadBinary('./../example/example-astc-10x8.ktx'), loadBinary('./../example/example-astc-10x10.ktx'), loadBinary('./../example/example-astc-12x10.ktx'), loadBinary('./../example/example-astc-12x12.ktx'), loadBinary('./../example/example-dxt1.ktx'), loadBinary('./../example/example-dxt1A.ktx'), loadBinary('./../example/example-dxt3.ktx'), loadBinary('./../example/example-dxt5.ktx'), loadBinary('./../example/example-etc1.ktx'), loadBinary('./../example/example-etc2.ktx'), loadBinary('./../example/example-etc2A.ktx'), loadBinary('./../example/example-pvrtc2BPP.ktx'), loadBinary('./../example/example-pvrtc2BPPA.ktx'), loadBinary('./../example/example-pvrtc4BPP.ktx'), loadBinary('./../example/example-pvrtc4BPPA.ktx')]);
 
 	var pixelRatio = window.devicePixelRatio;
 
@@ -387,7 +387,9 @@ function initialize() {
 		data.map(function (file) {
 			var element = document.getElementById('' + file.id);
 			var canvas = document.createElement('canvas');
-			var gl = canvas.getContext('webgl');
+			var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+
+			console.log(gl);
 
 			canvas.width = file.width * pixelRatio;
 			canvas.height = file.height * pixelRatio;
@@ -405,6 +407,12 @@ function initialize() {
 				element.appendChild(canvas);
 				createImage(gl, file);
 			} else {
+				var errorMessageElement = document.createElement('div');
+				errorMessageElement.className = 'error-message';
+
+				var errorMessage = errorMessageElement.innerHTML = 'WEBGL_compressed_texture_' + file.compression + ' extension is not available';
+
+				element.appendChild(errorMessageElement);
 				console.warn('WEBGL_compressed_texture_' + file.compression + ' extension is not available - ' + file.format);
 			}
 		});

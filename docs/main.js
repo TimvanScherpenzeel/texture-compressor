@@ -40,20 +40,20 @@ function parseKTX(buffer, facesExpected = 1, loadMipmaps = true) {
 	const COMPRESSED_RGBA_ASTC_10x10_KHR = 0x93BB;
 	const COMPRESSED_RGBA_ASTC_12x10_KHR = 0x93BC;
 	const COMPRESSED_RGBA_ASTC_12x12_KHR = 0x93BD;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 0x93D0;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 0x93D1;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 0x93D2;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 0x93D3;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 0x93D4;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 0x93D5;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 0x93D6;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 0x93D7;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 0x93D8;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 0x93D9;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 0x93DA;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 0x93DB;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 0x93DC;
-	const COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 0x93DD;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 0x93D0;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 0x93D1;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 0x93D2;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 0x93D3;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 0x93D4;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 0x93D5;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 0x93D6;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 0x93D7;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 0x93D8;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 0x93D9;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 0x93DA;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 0x93DB;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 0x93DC;
+	// const COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 0x93DD;
 
 	// https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
 	const COMPRESSED_R11_EAC = 0x9270;
@@ -453,7 +453,9 @@ function initialize() {
 			data.map((file) => {
 				const element = document.getElementById(`${file.id}`);
 				const canvas = document.createElement('canvas');
-				const gl = canvas.getContext('webgl');
+				const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+
+				console.log(gl);
 
 				canvas.width = file.width * pixelRatio;
 				canvas.height = file.height * pixelRatio;
