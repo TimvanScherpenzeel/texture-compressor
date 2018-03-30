@@ -419,12 +419,27 @@ function initialize() {
 	const app = document.getElementById('app');
 
 	const result = Promise.all([
-		loadBinary('./../example/example-astc.ktx'),
+		loadBinary('./../example/example-astc-4x4.ktx'),
+		loadBinary('./../example/example-astc-5x4.ktx'),
+		loadBinary('./../example/example-astc-5x5.ktx'),
+		loadBinary('./../example/example-astc-6x5.ktx'),
+		loadBinary('./../example/example-astc-6x6.ktx'),
+		loadBinary('./../example/example-astc-8x5.ktx'),
+		loadBinary('./../example/example-astc-8x6.ktx'),
+		loadBinary('./../example/example-astc-8x8.ktx'),
+		loadBinary('./../example/example-astc-10x5.ktx'),
+		loadBinary('./../example/example-astc-10x6.ktx'),
+		loadBinary('./../example/example-astc-10x8.ktx'),
+		loadBinary('./../example/example-astc-10x10.ktx'),
+		loadBinary('./../example/example-astc-12x10.ktx'),
+		loadBinary('./../example/example-astc-12x12.ktx'),
 		loadBinary('./../example/example-dxt1.ktx'),
+		loadBinary('./../example/example-dxt1A.ktx'),
 		loadBinary('./../example/example-dxt3.ktx'),
 		loadBinary('./../example/example-dxt5.ktx'),
 		loadBinary('./../example/example-etc1.ktx'),
 		loadBinary('./../example/example-etc2.ktx'),
+		loadBinary('./../example/example-etc2A.ktx'),
 		loadBinary('./../example/example-pvrtc1.ktx'),
 	]);
 
@@ -456,6 +471,12 @@ function initialize() {
 					element.appendChild(canvas);
 					createImage(gl, file);
 				} else {
+					const errorMessageElement = document.createElement('div');
+					errorMessageElement.className = 'error-message';
+
+					const errorMessage = errorMessageElement.innerHTML = `WEBGL_compressed_texture_${file.compression} extension is not available`;
+
+					element.appendChild(errorMessageElement);
 					console.warn(`WEBGL_compressed_texture_${file.compression} extension is not available - ${file.format}`);
 				}
 			});
