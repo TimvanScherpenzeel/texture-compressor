@@ -20,6 +20,7 @@ function fileLoader(url, responseType = '') {
 	});
 }
 
+
 // Parse KTX
 // ---------
 function parseKTX(buffer, facesExpected = 1, loadMipmaps = true) {
@@ -412,6 +413,7 @@ function createImage(gl, file) {
 	gl.clear(gl.COLOR_BUFFER_BIT);
 	gl.drawArrays(gl.TRIANGLES, 0, 6);
 }
+
 
 // Initialize
 // ----------
