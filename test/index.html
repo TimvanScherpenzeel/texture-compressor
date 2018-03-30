@@ -125,7 +125,7 @@
 							element.appendChild(canvas);
 							createImage(gl, file);
 						} else {
-							console.log(`WEBGL_compressed_texture_${file.compression} extension is not available - ${file.format}`);
+							console.warn(`WEBGL_compressed_texture_${file.compression} extension is not available - ${file.format}`);
 						}
 					});
 				});

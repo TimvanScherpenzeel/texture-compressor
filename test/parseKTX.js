@@ -1,4 +1,4 @@
-function parseKTX(buffer, facesExpected = 1) {
+function parseKTX(buffer, facesExpected = 1, loadMipmaps = true) {
 	// https://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/
 
 	// https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
@@ -235,12 +235,37 @@ function parseKTX(buffer, facesExpected = 1) {
 			break;
 	}
 
+	const mipmaps = [];
+	let dataOffset = (12 + (13 * 4)) + bytesOfKeyValueData;
+	let width = pixelWidth;
+	let height = pixelHeight;
+	const mipmapCount = loadMipmaps ? numberOfMipmapLevels : 1;
+
+	for (let i = 0; i < mipmapCount; i++) {
+		const imageSize = new Int32Array(buffer, dataOffset, 1)[0]; // Size per face
+
+		for (let j = 0; j < numberOfFaces; j++) {
+			const byteArray = new Uint8Array(buffer, dataOffset + 4, imageSize);
+			mipmaps.push({
+				data: byteArray,
+				width,
+				height,
+			});
+			dataOffset += imageSize + 4;
+			dataOffset += 3 - ((imageSize + 3) % 4);
+		}
+
+		width = Math.max(1.0, width * 0.5);
+		height = Math.max(1.0, height * 0.5);
+	}
+
 	return {
 		id,
 		compression,
 		width: pixelWidth,
 		height: pixelHeight,
 		format: glInternalFormat,
+		data: mipmaps[0].data,
 	};
 
 	// return 'ktx';
