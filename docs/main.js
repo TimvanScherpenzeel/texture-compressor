@@ -418,6 +418,7 @@ function createImage(gl, file) {
 function initialize() {
 	const app = document.getElementById('app');
 
+	// TODO: Fix Promise.all issues on IE 11
 	const result = Promise.all([
 		loadBinary('./../example/example-astc-4x4.ktx'),
 		loadBinary('./../example/example-astc-5x4.ktx'),
