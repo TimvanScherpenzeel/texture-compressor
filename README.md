@@ -16,50 +16,50 @@ $ npm install -g --save texture-compressor
 
 ## Support table
 
-| Device                         | Device vendor | Device model | OS      | OS version | Browser       | Browser version | WebGL | WebGL2 | ASTC | ATC | ETC | ETC1 | S3TC | PVRTC |
-| ------------------------------ | ------------- | ------------ | ------- | ---------- | ------------- | --------------- | ----- | ------ | ---- | --- | --- | ---- | ---- | ----- |
-| Apple-iPad 5th-Safari          | Apple         | iPad         | iOS     | 11.0.3     | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
-| Apple-iPad Air 2-Safari        | Apple         | iPad         | iOS     | 8.4        | Mobile Safari | 8.0             | X     |        |      |     |     |      |      | X     |
-| Apple-iPad Mini 3-Safari       | Apple         | iPad         | iOS     | 8.1.2      | Mobile Safari | 8.0             | X     |        |      |     |     |      |      | X     |
-| Apple-iPad Pro-Safari          | Apple         | iPad         | iOS     | 11.2.1     | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
-| Apple-iPhone 5S-Safari         | Apple         | iPhone       | iOS     | 8.1.3      | Mobile Safari | 8.0             | X     |        |      |     |     |      |      | X     |
-| Apple-iPhone 6 Plus-Safari     | Apple         | iPhone       | iOS     | 8.1        | Mobile Safari | 8.0             | X     |        |      |     |     |      |      | X     |
-| Apple-iPhone 6-Safari          | Apple         | iPhone       | iOS     | 8.1.3      | Mobile Safari | 8.0             | X     |        |      |     |     |      |      | X     |
-| Apple-iPhone 6S Plus-Safari    | Apple         | iPhone       | iOS     | 9.0.1      | Mobile Safari | 9.0             | X     |        |      |     |     |      |      | X     |
-| Apple-iPhone 6S-Safari         | Apple         | iPhone       | iOS     | 9.1        | Mobile Safari | 9.0             | X     |        |      |     |     |      |      | X     |
-| Apple-iPhone 7-Safari          | Apple         | iPhone       | iOS     | 10.3.1     | Mobile Safari | 10.0            | X     |        |      |     |     |      |      | X     |
-| Apple-iPhone 8 Plus-Safari     | Apple         | iPhone       | iOS     | 11.0       | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
-| Apple-iPhone 8-Safari          | Apple         | iPhone       | iOS     | 11.0       | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
-| Apple-iPhone SE-Safari         | Apple         | iPhone       | iOS     | 11.2.1     | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
-| Apple-iPhone X-Safari          | Apple         | iPhone       | iOS     | 11.2       | Mobile Safari | 11.0            | X     |        |      |     |     |      |      | X     |
-| Google-Nexus 5X-Chrome         | LG            | Nexus 5      | Android | 7.0        | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
-| Google-Nexus 6P-Chrome         | Huawei        | Nexus 6P     | Android | 7.0        | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
-| Google-Pixel 2-Chrome          | Google        | Pixel        | Android | 8.0.0      | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
-| Google-Pixel 2-Firefox         | Unknown       | Unknown      | Android | 8.0.0      | Firefox       | 51.0            | X     | X      |      | X   | X   | X    |      |       |
-| Google-Pixel v7-Chrome         | Google        | Pixel        | Android | 7.1        | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
-| Google-Pixel v8-Chrome         | Google        | Pixel        | Android | 8.0.0      | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
-| Google-Pixel v8-Firefox        | Unknown       | Unknown      | Android | 8.0.0      | Firefox       | 51.0            | X     | X      |      | X   | X   | X    |      |       |
-| LG-G5-Chrome                   | LG            | H850         | Android | 6.0.1      | Chrome        | 63.0.3239.111   | X     | X      | X    | X   |     | X    |      |       |
-| MacOS-High Sierra-Chrome       | Unknown       | Unknown      | Mac OS  | 10.13.3    | Chrome        | 65.0.3325.181   | X     | X      |      |     |     |      | X    |       |
-| MacOS-High Sierra-Firefox      | Unknown       | Unknown      | Mac OS  | 10.13      | Firefox       | 59.0            | X     | X      |      |     |     |      | X    |       |
-| MacOS-High Sierra-Safari       | Unknown       | Unknown      | Mac OS  | 10.13.3    | Safari        | 11.0.3          | X     |        |      |     |     |      | X    |       |
-| Motorola-Moto X 2nd Gen-Chrome | Motorola      | XT1092       | Android | 6.0        | Chrome        | 63.0.3239.111   | X     |        |      | X   |     | X    |      |       |
-| Samsung-S6-Chrome              | Samsung       | SM-G920F     | Android | 5.0.2      | Chrome        | 63.0.3239.111   | X     | X      | X    |     |     | X    |      |       |
-| Samsung-S7-Chrome              | Samsung       | SM-G930F     | Android | 6.0.1      | Chrome        | 63.0.3239.111   | X     | X      | X    |     |     | X    |      |       |
-| Samsung-S7-Firefox             | Unknown       | Unknown      | Android | 6.0.1      | Firefox       | 51.0            | X     | X      |      |     | X   | X    |      |       |
-| Samsung-S8-Chrome              | Samsung       | SM-G950F     | Android | 7.0        | Chrome        | 63.0.3239.111   | X     | X      | X    |     |     | X    |      |       |
-| Samsung-S8-Firefox             | Unknown       | Unknown      | Android | 7.0        | Firefox       | 51.0            | X     | X      |      |     | X   | X    |      |       |
-| Samsung-S8+-Chrome             | Samsung       | SM-G955F     | Android | 7.0        | Chrome        | 63.0.3239.111   | X     | X      | X    |     |     | X    |      |       |
-| Samsung-S8+-Firefox            | Unknown       | Unknown      | Android | 7.0        | Firefox       | 51.0            | X     | X      |      |     | X   | X    |      |       |
-| Windows 10-Chrome              | Unknown       | Unknown      | Windows | 10         | Chrome        | 65.0.3325.146   | X     | X      |      |     |     | X    | X    |       |
-| Windows 10-Edge 14             | Unknown       | Unknown      | Windows | 10         | Edge          | 14.14393        | X     |        |      |     |     |      | X    |       |
-| Windows 10-Edge 15             | Unknown       | Unknown      | Windows | 10         | Edge          | 15.15063        | X     |        |      |     |     |      | X    |       |
-| Windows 10-Edge 16             | Unknown       | Unknown      | Windows | 10         | Edge          | 16.16299        | X     |        |      |     |     |      | X    |       |
-| Windows 10-Firefox             | Unknown       | Unknown      | Windows | 10         | Firefox       | 59.0            | X     |        |      |     |     |      | X    |       |
-| Windows 10-IE 11               | Unknown       | Unknown      | Windows | 10         | IE            | 11.0            | X     |        |      |     |     |      | X    |       |
-| Windows 7-IE 10                | Unknown       | Unknown      | Windows | 7          | IE            | 10.0            |       |        |      |     |     |      |      |       |
-| Windows 7-IE 11                | Unknown       | Unknown      | Windows | 7          | IE            | 11.0            | X     |        |      |     |     |      | X    |       |
-| Windows 8-IE 10                | Unknown       | Unknown      | Windows | 8          | IE            | 10.0            |       |        |      |     |     |      |      |       |
+| Device                  | OS      | OS version | Browser       | Browser version | ASTC | ATC | ETC | ETC1 | S3TC | PVRTC |
+| ------------------------| ------- | ---------- | ------------- | --------------- | ---- | --- | --- | ---- | ---- | ----- |
+| Apple iPad 5th          | iOS     | 11.0.3     | Mobile Safari | 11.0            |      |     |     |      |      | X     |
+| Apple iPad Air 2        | iOS     | 8.4        | Mobile Safari | 8.0             |      |     |     |      |      | X     |
+| Apple iPad Mini 3       | iOS     | 8.1.2      | Mobile Safari | 8.0             |      |     |     |      |      | X     |
+| Apple iPad Pro          | iOS     | 11.2.1     | Mobile Safari | 11.0            |      |     |     |      |      | X     |
+| Apple iPhone 5S         | iOS     | 8.1.3      | Mobile Safari | 8.0             |      |     |     |      |      | X     |
+| Apple iPhone 6 Plus     | iOS     | 8.1        | Mobile Safari | 8.0             |      |     |     |      |      | X     |
+| Apple iPhone 6          | iOS     | 8.1.3      | Mobile Safari | 8.0             |      |     |     |      |      | X     |
+| Apple iPhone 6S Plus    | iOS     | 9.0.1      | Mobile Safari | 9.0             |      |     |     |      |      | X     |
+| Apple iPhone 6S         | iOS     | 9.1        | Mobile Safari | 9.0             |      |     |     |      |      | X     |
+| Apple iPhone 7          | iOS     | 10.3.1     | Mobile Safari | 10.0            |      |     |     |      |      | X     |
+| Apple iPhone 8          | iOS     | 11.0       | Mobile Safari | 11.0            |      |     |     |      |      | X     |
+| Apple iPhone 8          | iOS     | 11.0       | Mobile Safari | 11.0            |      |     |     |      |      | X     |
+| Apple iPhone SE         | iOS     | 11.2.1     | Mobile Safari | 11.0            |      |     |     |      |      | X     |
+| Apple iPhone X          | iOS     | 11.2       | Mobile Safari | 11.0            |      |     |     |      |      | X     |
+| Google Nexus 5X         | Android | 7.0        | Chrome        | 63.0.3239.111   | X    | X   |     | X    |      |       |
+| Google Nexus 6P         | Android | 7.0        | Chrome        | 63.0.3239.111   | X    | X   |     | X    |      |       |
+| Google Pixel 2          | Android | 8.0.0      | Chrome        | 63.0.3239.111   | X    | X   |     | X    |      |       |
+| Google Pixel 2          | Android | 8.0.0      | Firefox       | 51.0            |      | X   | X   | X    |      |       |
+| Google Pixel            | Android | 7.1        | Chrome        | 63.0.3239.111   | X    | X   |     | X    |      |       |
+| Google Pixel            | Android | 8.0.0      | Chrome        | 63.0.3239.111   | X    | X   |     | X    |      |       |
+| Google Pixel            | Android | 8.0.0      | Firefox       | 51.0            |      | X   | X   | X    |      |       |
+| LG G5                   | Android | 6.0.1      | Chrome        | 63.0.3239.111   | X    | X   |     | X    |      |       |
+| MacOS High Sierra       | Mac OS  | 10.13.3    | Chrome        | 65.0.3325.181   |      |     |     |      | X    |       |
+| MacOS High Sierra       | Mac OS  | 10.13      | Firefox       | 59.0            |      |     |     |      | X    |       |
+| MacOS High Sierra       | Mac OS  | 10.13.3    | Safari        | 11.0.3          |      |     |     |      | X    |       |
+| Motorola Moto X 2nd Gen | Android | 6.0        | Chrome        | 63.0.3239.111   |      | X   |     | X    |      |       |
+| Samsung S6              | Android | 5.0.2      | Chrome        | 63.0.3239.111   | X    |     |     | X    |      |       |
+| Samsung S7              | Android | 6.0.1      | Chrome        | 63.0.3239.111   | X    |     |     | X    |      |       |
+| Samsung S7              | Android | 6.0.1      | Firefox       | 51.0            |      |     | X   | X    |      |       |
+| Samsung S8              | Android | 7.0        | Chrome        | 63.0.3239.111   | X    |     |     | X    |      |       |
+| Samsung S8              | Android | 7.0        | Firefox       | 51.0            |      |     | X   | X    |      |       |
+| Samsung S8+             | Android | 7.0        | Chrome        | 63.0.3239.111   | X    |     |     | X    |      |       |
+| Samsung S8+             | Android | 7.0        | Firefox       | 51.0            |      |     | X   | X    |      |       |
+| Windows 10              | Windows | 10         | Chrome        | 65.0.3325.146   |      |     |     | X    | X    |       |
+| Windows 10              | Windows | 10         | Edge          | 14.14393        |      |     |     |      | X    |       |
+| Windows 10              | Windows | 10         | Edge          | 15.15063        |      |     |     |      | X    |       |
+| Windows 10              | Windows | 10         | Edge          | 16.16299        |      |     |     |      | X    |       |
+| Windows 10              | Windows | 10         | Firefox       | 59.0            |      |     |     |      | X    |       |
+| Windows 10              | Windows | 10         | IE            | 11.0            |      |     |     |      | X    |       |
+| Windows 7               | Windows | 7          | IE            | 10.0            |      |     |     |      |      |       |
+| Windows 7               | Windows | 7          | IE            | 11.0            |      |     |     |      | X    |       |
+| Windows 8               | Windows | 8          | IE            | 10.0            |      |     |     |      |      |       |
 
 ## Example
 
