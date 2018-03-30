@@ -440,7 +440,10 @@ function initialize() {
 		loadBinary('./../example/example-etc1.ktx'),
 		loadBinary('./../example/example-etc2.ktx'),
 		loadBinary('./../example/example-etc2A.ktx'),
-		loadBinary('./../example/example-pvrtc1.ktx'),
+		loadBinary('./../example/example-pvrtc2BPP.ktx'),
+		loadBinary('./../example/example-pvrtc2BPPA.ktx'),
+		loadBinary('./../example/example-pvrtc4BPP.ktx'),
+		loadBinary('./../example/example-pvrtc4BPPA.ktx'),
 	]);
 
 	const pixelRatio = window.devicePixelRatio;
