@@ -4,6 +4,8 @@
   "description": "CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in a KTX container.",
   "main": "index.js",
   "scripts": {
+    "generate": "./docs/generate.sh",
+    "generate-flipped": "./docs/generate_flipped.sh",
     "start": "http-server --cors -s -o",
     "lint": "eslint lib/**/*.js",
     "deploy": "npm version patch && npm publish && git push origin"
