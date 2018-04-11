@@ -372,7 +372,6 @@ function createImage(gl, file) {
 
 		void main(void) {
 			gl_FragColor = texture2D(diffuse, vTexCoord);
-			// gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
 		}
 	`;
 
