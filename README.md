@@ -129,9 +129,12 @@ $ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/
 	-q, --quality [0 - 10, default: 5] [not required]
 	-a, --alpha [true / false, default: false] [not required]
 	-m, --mipmap [true / false, default: false] [not required]
+	-l, --levels [0 - n, default: 9] [not required]
 
 ### Tool flags
 	-f, --flags ["flag value" "flag value"] [not required]
+
+	For example: to pass a flipY flag to PVRTexTool (used for both ETC and PVRTC) your would use `-f "flip y"`.
 
 ## Licence
 
