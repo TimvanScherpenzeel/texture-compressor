@@ -85,7 +85,7 @@ $ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/
 
-# example-etc1 (-flipY does not work with ETC1)
+# example-etc1
 $ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-etc1.ktx -t etc -c etc1
 
 # example-etc2
