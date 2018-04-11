@@ -303,7 +303,7 @@ function parseKTX(buffer, facesExpected = 1, loadMipmaps = true) {
 		width: pixelWidth,
 		height: pixelHeight,
 		format: glInternalFormat,
-		data: mipmaps[0].data,
+		data: mipmaps[0].data, // Mip maps are currently disabled
 	};
 }
 
