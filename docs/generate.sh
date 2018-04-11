@@ -7,45 +7,8 @@
 # example-astc-4x4
 node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-4x4.ktx -m astc -c astc -b 4x4
 
-# example-astc-5x4
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-5x4.ktx -m astc -c astc -b 5x4
-
-# example-astc-5x5
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-5x5.ktx -m astc -c astc -b 5x5
-
-# example-astc-6x5
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-6x5.ktx -m astc -c astc -b 6x5
-
-# example-astc-6x6
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-6x6.ktx -m astc -c astc -b 6x6
-
-# example-astc-8x5
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-8x5.ktx -m astc -c astc -b 8x5
-
-# example-astc-8x6
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-8x6.ktx -m astc -c astc -b 8x6
-
 # example-astc-8x8
 node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-8x8.ktx -m astc -c astc -b 8x8
-
-# example-astc-10x5
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-10x5.ktx -m astc -c astc -b 10x5
-
-# example-astc-10x6
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-10x6.ktx -m astc -c astc -b 10x6
-
-# example-astc-10x8
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-10x8.ktx -m astc -c astc -b 10x8
-
-# example-astc-10x10
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-10x10.ktx -m astc -c astc -b 10x10
-
-# example-astc-12x10
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-12x10.ktx -m astc -c astc -b 12x10
-
-# example-astc-12x12
-node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-12x12.ktx -m astc -c astc -b 12x12
-
 
 ### ETC
 
