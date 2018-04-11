@@ -16,7 +16,7 @@ $ npm install -g --save texture-compressor
 
 ## Live demo
 
-[Live demo](https://timvanscherpenzeel.github.io/texture-compressor/)
+[Live demo](https://timvanscherpenzeel.github.io/texture-compressor/) using [KTXLoader](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/KTXLoader.js) from [Three.js](https://github.com/mrdoob/three.js/).
 
 ## Docs
 
