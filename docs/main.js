@@ -94,26 +94,8 @@ function init() {
 		meshes.push(new THREE.Mesh(geometry, material4));
 	}
 
-<<<<<<< HEAD
-	return {
-		id,
-		compression,
-		width: pixelWidth,
-		height: pixelHeight,
-		format: glInternalFormat,
-		data: mipmaps[0].data, // Mip maps are currently disabled
-	};
-}
-
-
-// Parse binary
-// ------------
-function parseBinary(filename, bin) {
-	const containerType = filename.split('.').pop();
-=======
 	var x = - meshes.length / 2 * 225;
 	for (var i = 0; i < meshes.length; ++ i, x += 300) {
->>>>>>> master
 
 		var mesh = meshes[ i ];
 		mesh.position.x = x;
