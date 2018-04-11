@@ -32,10 +32,10 @@ function init() {
 
 	if (formats.astc) {
 		material1 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-astc-4x4.ktx'),
+			map: loader.load('./../example/flippedY/example-astc-4x4.ktx'),
 		});
 		material2 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-astc-8x8.ktx'),
+			map: loader.load('./../example/flippedY/example-astc-8x8.ktx'),
 		});
 
 		meshes.push(new THREE.Mesh(geometry, material1));
@@ -44,17 +44,17 @@ function init() {
 
 	if (formats.etc1) {
 		material1 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-etc1.ktx'),
+			map: loader.load('./../example/flippedY/example-etc1.ktx'),
 		});
 		meshes.push(new THREE.Mesh(geometry, material1));
 	}
 
 	if (formats.etc2) {
 		material1 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-etc2.ktx'),
+			map: loader.load('./../example/flippedY/example-etc2.ktx'),
 		});
 		material2 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-etc2A.ktx'),
+			map: loader.load('./../example/flippedY/example-etc2A.ktx'),
 		});
 		meshes.push(new THREE.Mesh(geometry, material1));
 		meshes.push(new THREE.Mesh(geometry, material2));
@@ -62,16 +62,16 @@ function init() {
 
 	if (formats.pvrtc) {
 		material1 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-pvrtc2BPP.ktx'),
+			map: loader.load('./../example/flippedY/example-pvrtc2BPP.ktx'),
 		});
 		material2 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-pvrtc2BPPA.ktx'),
+			map: loader.load('./../example/flippedY/example-pvrtc2BPPA.ktx'),
 		});
 		material3 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-pvrtc4BPP.ktx'),
+			map: loader.load('./../example/flippedY/example-pvrtc4BPP.ktx'),
 		});
 		material4 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-pvrtc4BPPA.ktx'),
+			map: loader.load('./../example/flippedY/example-pvrtc4BPPA.ktx'),
 		});
 		meshes.push(new THREE.Mesh(geometry, material1));
 		meshes.push(new THREE.Mesh(geometry, material2));
@@ -81,16 +81,16 @@ function init() {
 
 	if (formats.s3tc) {
 		material1 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-dxt1.ktx'),
+			map: loader.load('./../example/flippedY/example-dxt1.ktx'),
 		});
 		material2 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-dxt1A.ktx'),
+			map: loader.load('./../example/flippedY/example-dxt1A.ktx'),
 		});
 		material3 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-dxt3.ktx'),
+			map: loader.load('./../example/flippedY/example-dxt3.ktx'),
 		});
 		material4 = new THREE.MeshBasicMaterial({
-			map: loader.load('./../example/example-dxt5.ktx'),
+			map: loader.load('./../example/flippedY/example-dxt5.ktx'),
 		});
 		meshes.push(new THREE.Mesh(geometry, material1));
 		meshes.push(new THREE.Mesh(geometry, material2));
