@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Texture handler</title>
+	<title>Texture compressor</title>
 	<style>
 		body, html {
 			font-family: Arial, Helvetica, sans-serif;
@@ -16,88 +16,15 @@
 		}
 
 		#app {
-			padding-left: 25px;
-			padding-bottom: 25px;
-		}
-
-		.item {
-			padding-bottom: 10px;
-		}
-
-		.not-in-use {
-			color: rgb(200, 200, 200);
-		}
-
-		.error-message {
-			color: red;
-			font-size: 12px;
-			font-style: italic;
-			padding: 5px 0px 5px 0px;
-		}
-
-		canvas {
-			margin: 10px 0 20px 0;
-			padding: 0px;
-			border: 1px solid red;
-			display: block;
-			max-width: 250px;
-			max-height: 250px;
+			padding-left: 20px;
 		}
 	</style>
 </head>
 <body>
-    <div id="app">
-		<h1>Texture handler</h1>
-		<section class="astc">
-			<h3>ASTC</h3>
-			<div class="item" id="ASTC_RGBA_4x4">ASTC 4x4 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_5x4">ASTC 5x4 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_5x5">ASTC 5x5 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_6x5">ASTC 6x5 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_6x6">ASTC 6x6 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_8x5">ASTC 8x5 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_8x6">ASTC 8x6 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_8x8">ASTC 8x8 (RGBA) (Default)</div>
-			<div class="item" id="ASTC_RGBA_10x5">ASTC 10x5 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_10x6">ASTC 10x6 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_10x8">ASTC 10x8 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_10x10">ASTC 10x10 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_12x10">ASTC 12x10 (RGBA)</div>
-			<div class="item" id="ASTC_RGBA_12x12">ASTC 12x12 (RGBA)</div>
-		</section>
+	<pre id="app"></pre>
 
-		<section class="s3tc">
-			<h3>S3TC</h3>
-			<div class="item" id="DXT1_RGB">DXT1 (RGB) (Default)</div>
-			<div class="item" id="DXT1_RGBA">DXT1 (RGBA)</div>
-			<div class="item" id="DXT3_RGBA">DXT3 (RGBA) (Default)</div>
-			<div class="item" id="DXT5_RGBA">DXT5 (RGBA) (Default)</div>
-		</section>
-
-		<section class="etc1">
-			<h3>ETC1</h3>
-			<div class="item" id="ETC1_RGB">ETC1 (RGB) (Default)</div>
-		</section>
-
-		<section class="etc2">
-			<h3>ETC2</h3>
-			<div class="item" id="ETC2_RGB">ETC2 (RGB) (Default)</div>
-			<div class="item" id="ETC2_RGBA">ETC2 (RGBA)</div>
-		</section>
-
-		<section class="pvrtc">
-			<h3>PVRTC</h3>
-			<div class="item" id="PVRTC_RGB_2BPP">PVRTC 2BPP (RGB) (Default)</div>
-			<div class="item" id="PVRTC_RGBA_2BPP">PVRTC 2BPP (RGBA)</div>
-			<div class="item" id="PVRTC_RGB_4BPP">PVRTC 4BPP (RGB)</div>
-			<div class="item" id="PVRTC_RGBA_4BPP">PVRTC 4BPP (RGBA)</div>
-		</section>
-	</div>
-
-	<!-- Babel polyfill (promise support in IE 11) -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script> -->
-	<!-- <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script> -->
-	<!-- <script src="./main.js"></script> -->
-	<script src="./main-compiled.js"></script>
+	<script src="./three.min.js"></script>
+	<script src="./KTXLoader.js"></script>
+	<script src="./main.js"></script>
 </body>
 </html>
