@@ -18,10 +18,6 @@ $ npm install -g --save texture-compressor
 
 [Live demo](https://timvanscherpenzeel.github.io/texture-compressor/) using [KTXLoader](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/KTXLoader.js) from [Three.js](https://github.com/mrdoob/three.js/).
 
-## Docs
-
-The source code of the `KTX loader` is available on in [docs/main.js](https://github.com/TimvanScherpenzeel/texture-compressor/blob/master/docs/main.js) in the `docs` folder.
-
 ## Support table
 
 | Device                  | OS      | OS version | Browser       | Browser version | ASTC | ETC | ETC1 | S3TC | PVRTC |
