@@ -128,6 +128,7 @@ $ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/
 
 	-q, --quality [0 - 10, default: 5] [not required]
 	-t, --transparant [true / false, default: false] [not required]
+	-y, --flipY [tue / false, default: false] [not required]
 
 ### Tool flags
 	-f, --flags ["flag value" "flag value"] [not required]
