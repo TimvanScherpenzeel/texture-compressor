@@ -76,7 +76,7 @@ The source code of the `KTX loader` is available on in [docs/main.js](https://gi
 # Astcenc - https://github.com/ARM-software/astc-encoder
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
-$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc.ktx -t astc -c astc
+$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-astc-8x8.ktx -t astc -c astc
 ```
 
 ### ETC
@@ -96,7 +96,7 @@ $ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
 # Extension - http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
 
-$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-pvrtc1.ktx -t pvr -c pvrtc1
+$ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-pvrtc2BPP.ktx -t pvr -c pvrtc1
 ```
 
 ### S3TC
