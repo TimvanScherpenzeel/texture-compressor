@@ -69,6 +69,7 @@ $ npm install -g --save texture-compressor
 
 ### ASTC
 ```sh
+# PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
 # Astcenc - https://github.com/ARM-software/astc-encoder
 # Extension - https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/
 
