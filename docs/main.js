@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 var camera, scene, renderer;
 var meshes = [];
 
