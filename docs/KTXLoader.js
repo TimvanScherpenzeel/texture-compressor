@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /**
  * @author amakaseev / https://github.com/amakaseev
  *

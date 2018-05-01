@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 var camera, scene, renderer;
 var meshes = [];
 
@@ -32,64 +34,68 @@ function init() {
 	// TODO: add cubemap support
 	var loader = new THREE.KTXLoader();
 
+	// var type = '';
+	var type = 'flippedY';
+	// var type = 'flippedY-mipmaps';
+
 	if (formats.astc) {
-		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-astc-4x4.ktx') });
+		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-astc-4x4.ktx') });
 		appElement.appendChild(document.createTextNode(' ASTC-4x4 '));
 		meshes.push(new THREE.Mesh(geometry, material1));
 
-		material2 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-astc-8x8.ktx') });
+		material2 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-astc-8x8.ktx') });
 		appElement.appendChild(document.createTextNode(' ASTC-8x8 '));
 		meshes.push(new THREE.Mesh(geometry, material2));
 	}
 
 	if (formats.etc1) {
-		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-etc1.ktx') });
+		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-etc1.ktx') });
 		appElement.appendChild(document.createTextNode(' ETC1 '));
 		meshes.push(new THREE.Mesh(geometry, material1));
 	}
 
 	if (formats.etc2) {
-		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-etc2.ktx') });
+		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-etc2.ktx') });
 		appElement.appendChild(document.createTextNode(' ETC2 '));
 		meshes.push(new THREE.Mesh(geometry, material1));
 
-		material2 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-etc2A.ktx') });
+		material2 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-etc2A.ktx') });
 		appElement.appendChild(document.createTextNode(' ETC2A '));
 		meshes.push(new THREE.Mesh(geometry, material2));
 	}
 
 	if (formats.pvrtc) {
-		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-pvrtc2BPP.ktx') });
+		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-pvrtc2BPP.ktx') });
 		appElement.appendChild(document.createTextNode(' PVRTC-2BPP '));
 		meshes.push(new THREE.Mesh(geometry, material1));
 
-		material2 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-pvrtc2BPPA.ktx') });
+		material2 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-pvrtc2BPPA.ktx') });
 		appElement.appendChild(document.createTextNode(' PVRTC-2BPPA '));
 		meshes.push(new THREE.Mesh(geometry, material2));
 
-		material3 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-pvrtc4BPP.ktx') });
+		material3 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-pvrtc4BPP.ktx') });
 		appElement.appendChild(document.createTextNode(' PVRTC-4BPP '));
 		meshes.push(new THREE.Mesh(geometry, material3));
 
-		material4 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-pvrtc4BPPA.ktx') });
+		material4 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-pvrtc4BPPA.ktx') });
 		appElement.appendChild(document.createTextNode(' PVRTC-4BPPA '));
 		meshes.push(new THREE.Mesh(geometry, material4));
 	}
 
 	if (formats.s3tc) {
-		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-dxt1.ktx') });
+		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-dxt1.ktx') });
 		appElement.appendChild(document.createTextNode(' DXT1 '));
 		meshes.push(new THREE.Mesh(geometry, material1));
 
-		material2 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-dxt1A.ktx') });
+		material2 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-dxt1A.ktx') });
 		appElement.appendChild(document.createTextNode(' DXT1A '));
 		meshes.push(new THREE.Mesh(geometry, material2));
 
-		material3 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-dxt3.ktx') });
+		material3 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-dxt3.ktx') });
 		appElement.appendChild(document.createTextNode(' DXT3 '));
 		meshes.push(new THREE.Mesh(geometry, material3));
 
-		material4 = new THREE.MeshBasicMaterial({ map: loader.load('./data/flippedY/example-dxt5.ktx') });
+		material4 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-dxt5.ktx') });
 		appElement.appendChild(document.createTextNode(' DXT5 '));
 		meshes.push(new THREE.Mesh(geometry, material4));
 	}
