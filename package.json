@@ -17,10 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "argparse": "^1.0.9",
-    "fs-extra": "^5.0.0",
-    "image-size": "^0.6.1",
-    "jimp": "^0.2.28",
-    "uuid": "^3.2.1"
+    "image-size": "^0.6.1"
   },
   "devDependencies": {
     "eslint": "^4.13.1",
