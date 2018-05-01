@@ -157,7 +157,7 @@ $ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/
 ### Tool flags
 	-f, --flags ["flag value" "flag value"] [not required]
 
-To find tool specific flags please refer to the manuals of [ASTC](https://developer.arm.com/-/media/Files/pdf/graphics-and-multimedia/Stacy_ASTC_white%20paper.pdf), [ETC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [PVRTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [S3TC](https://github.com/BinomialLLC/crunch/blob/235946f7a1cf8b9c97e8bf0e8062d5439a51dec7/crunch/crunch.cpp#L70-L181).
+To find tool specific flags please refer to the manuals of [ASTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [ETC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [PVRTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [S3TC](https://github.com/BinomialLLC/crunch/blob/235946f7a1cf8b9c97e8bf0e8062d5439a51dec7/crunch/crunch.cpp#L70-L181).
 
 ## Licence
 
