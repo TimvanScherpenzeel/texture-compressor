@@ -16,7 +16,7 @@ $ npm install -g --save texture-compressor
 
 ## Live demo
 
-[Live demo](https://timvanscherpenzeel.github.io/texture-compressor/) using [KTXLoader](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/KTXLoader.js) from [Three.js](https://github.com/mrdoob/three.js/). Please note that the demo uses vertically flipped textures in order to display correctly.
+[Live demo](https://timvanscherpenzeel.github.io/texture-compressor/) using [KTXLoader](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/KTXLoader.js) from [Three.js](https://github.com/mrdoob/three.js/). Please note that the demo uses vertically flipped textures in order to display correctly. As of now there is an issue with mipmapping levels in `KTXLoader` that I would like fix in the near future.
 
 ## Support table
 
