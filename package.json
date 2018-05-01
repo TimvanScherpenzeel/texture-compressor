@@ -6,7 +6,7 @@
   "scripts": {
     "generate-default": "./docs/generate_default.sh",
     "generate-flipped-y": "./docs/generate_flipped_y.sh",
-    "generate-mipmaps": "./docs/generate_mipmaps.sh",
+    "generate-flipped-y-mipmaps": "./docs/generate_flipped_y_mipmaps.sh",
     "start": "http-server --cors -s -o",
     "lint": "eslint lib/**/*.js",
     "deploy": "npm version patch && npm publish && git push origin"
