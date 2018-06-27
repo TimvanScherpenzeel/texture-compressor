@@ -35,8 +35,8 @@ function init() {
 	var loader = new THREE.KTXLoader();
 
 	// var type = '';
-	var type = 'flippedY';
-	// var type = 'flippedY-mipmaps';
+	// var type = 'flippedY';
+	var type = 'flippedY-mipmaps';
 
 	if (formats.astc) {
 		material1 = new THREE.MeshBasicMaterial({ map: loader.load('./example/' + type + '/example-astc-4x4.ktx') });
