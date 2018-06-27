@@ -23,6 +23,8 @@ THREE.KTXLoader.parse = function ( buffer, loadMipmaps ) {
 
 	var ktx = new KhronosTextureContainer( buffer, 1 );
 
+	console.log("Number of mipmaps:", ktx.mipmaps(loadMipmaps));
+
 	return {
 		mipmaps: ktx.mipmaps( loadMipmaps ),
 		width: ktx.pixelWidth,
