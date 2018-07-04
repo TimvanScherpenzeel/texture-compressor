@@ -16,12 +16,12 @@ $ npm install -g --save texture-compressor
 
 ## Live demo
 
-[Live demo](https://timvanscherpenzeel.github.io/texture-compressor/) using [KTXLoader](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/KTXLoader.js) from [Three.js](https://github.com/mrdoob/three.js/). Please note that the demo uses vertically flipped textures in order to display correctly. As of now there is an issue with mipmapping levels in `KTXLoader` that I would like fix in the near future.
+[Live demo](https://timvanscherpenzeel.github.io/texture-compressor/) using [KTXLoader](https://github.com/mrdoob/three.js/blob/dev/examples/js/loaders/KTXLoader.js) from [Three.js](https://github.com/mrdoob/three.js/).
 
 ## Support table
 
 | Device                  | OS      | OS version | Browser       | Browser version | ASTC | ETC | ETC1 | S3TC | PVRTC |
-| ------------------------| ------- | ---------- | ------------- | --------------- | ---- | --- | ---- | ---- | ----- |
+| ----------------------- | ------- | ---------- | ------------- | --------------- | ---- | --- | ---- | ---- | ----- |
 | Apple iPad 5th          | iOS     | 11.0.3     | Mobile Safari | 11.0            |      |     |      |      | X     |
 | Apple iPad Air 2        | iOS     | 8.4        | Mobile Safari | 8.0             |      |     |      |      | X     |
 | Apple iPad Mini 3       | iOS     | 8.1.2      | Mobile Safari | 8.0             |      |     |      |      | X     |
@@ -68,6 +68,7 @@ $ npm install -g --save texture-compressor
 ## Example
 
 ### ASTC
+
 ```sh
 # PVRTexTool - https://community.imgtec.com/developers/powervr/tools/pvrtextool/
 # Astcenc - https://github.com/ARM-software/astc-encoder
@@ -137,25 +138,28 @@ $ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/
 ## Flags
 
 ### Required
-	-c, --compression ['astc', 'etc1', 'etc2', 'pvrtc1', 'dxt1', 'dxt3', 'dxt5'] [required]
-	-i, --input [example: ./docs/example/example.png] [required]
-	-o, --output [example: ./docs/example/example.ktx] [required]
-	-t, --type ['astc', 'etc', 'pvr', 's3tc'] [required]
+
+    -c, --compression ['astc', 'etc1', 'etc2', 'pvrtc1', 'dxt1', 'dxt3', 'dxt5'] [required]
+    -i, --input [example: ./docs/example/example.png] [required]
+    -o, --output [example: ./docs/example/example.ktx] [required]
+    -t, --type ['astc', 'etc', 'pvr', 's3tc'] [required]
 
 ### Optional
-	-b, --bitrate [2.0 - 4.0, default: 2.0 = 8x8 blocksize] [not required]
 
-	Or if using ASTC you can optionally change the bitrate for one of the following blocksizes:
-	[4x4, 5x4, 5x5, 6x5, 6x6, 8x5, 8x6, 8x8, 10x5, 10x6, 10x8, 10x10, 12x10, 12x12] [not required]
+    -b, --bitrate [2.0 - 4.0, default: 2.0 = 8x8 blocksize] [not required]
 
-	-q, --quality [0 - 10, default: 5] [not required]
-	-a, --alpha [true / false, default: false] [not required]
-	-m, --mipmap [true / false, default: false] [not required]
-	-l, --levels [0 - n, default: 9] [not required]
-	-y, --flipY [tue / false, default: false] [not required]
+    Or if using ASTC you can optionally change the bitrate for one of the following blocksizes:
+    [4x4, 5x4, 5x5, 6x5, 6x6, 8x5, 8x6, 8x8, 10x5, 10x6, 10x8, 10x10, 12x10, 12x12] [not required]
+
+    -q, --quality [0 - 10, default: 5] [not required]
+    -a, --alpha [true / false, default: false] [not required]
+    -m, --mipmap [true / false, default: false] [not required]
+    -l, --levels [0 - n, default: 9] [not required]
+    -y, --flipY [tue / false, default: false] [not required]
 
 ### Tool flags
-	-f, --flags ["flag value" "flag value"] [not required]
+
+    -f, --flags ["flag value" "flag value"] [not required]
 
 To find tool specific flags please refer to the manuals of [ASTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [ETC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [PVRTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [S3TC](https://github.com/BinomialLLC/crunch/blob/235946f7a1cf8b9c97e8bf0e8062d5439a51dec7/crunch/crunch.cpp#L70-L181).
 
