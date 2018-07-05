@@ -37,7 +37,10 @@ function init() {
 		material1 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-astc-4x4.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' ASTC-4x4 '));
@@ -46,7 +49,10 @@ function init() {
 		material2 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-astc-8x8.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' ASTC-8x8 '));
@@ -57,7 +63,10 @@ function init() {
 		material1 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-etc1.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' ETC1 '));
@@ -68,7 +77,10 @@ function init() {
 		material1 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-etc2.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' ETC2 '));
@@ -77,7 +89,10 @@ function init() {
 		material2 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-etc2A.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' ETC2A '));
@@ -88,7 +103,10 @@ function init() {
 		material1 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-pvrtc2BPP.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' PVRTC-2BPP '));
@@ -97,7 +115,10 @@ function init() {
 		material2 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-pvrtc2BPPA.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' PVRTC-2BPPA '));
@@ -106,7 +127,10 @@ function init() {
 		material3 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-pvrtc4BPP.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' PVRTC-4BPP '));
@@ -115,7 +139,10 @@ function init() {
 		material4 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-pvrtc4BPPA.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' PVRTC-4BPPA '));
@@ -126,7 +153,10 @@ function init() {
 		material1 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-dxt1.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' DXT1 '));
@@ -135,7 +165,10 @@ function init() {
 		material2 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-dxt1A.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' DXT1A '));
@@ -144,7 +177,10 @@ function init() {
 		material3 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-dxt3.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' DXT3 '));
@@ -153,7 +189,10 @@ function init() {
 		material4 = new THREE.MeshBasicMaterial({
 			map: loader.load('./example/' + type + '/example-dxt5.ktx', function(texture) {
 				texture.magFilter = THREE.LinearFilter;
-				texture.minFilter = THREE.LinearMipMapLinearFilter;
+				texture.minFilter =
+					type === 'flippedY-mipmaps'
+						? THREE.LinearMipMapLinearFilter
+						: THREE.LinearFilter;
 			}),
 		});
 		appElement.appendChild(document.createTextNode(' DXT5 '));
