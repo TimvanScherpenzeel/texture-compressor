@@ -135,6 +135,8 @@ $ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/
 $ node ./bin/texture-compressor -i ./docs/example/example.png -o ./docs/example/example-dxt5.ktx -t s3tc -c dxt5
 ```
 
+In [docs/generate_default.sh](docs/generate_default.sh), [docs/generate_flipped_y.sh](docs/generate_flipped_y.sh) and [docs/generate_flipped_y_mipmaps.sh](docs/generate_flipped_y_mipmaps.sh) one can find batch scripts for automatically generating all the filetypes mentioned above.
+
 ## Flags
 
 ### Required
