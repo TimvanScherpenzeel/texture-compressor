@@ -164,6 +164,12 @@ In [docs/generate_default.sh](docs/generate_default.sh), [docs/generate_flipped_
 
 To find tool specific flags please refer to the manuals of [ASTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [ETC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [PVRTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [S3TC](https://github.com/BinomialLLC/crunch/blob/235946f7a1cf8b9c97e8bf0e8062d5439a51dec7/crunch/crunch.cpp#L70-L181).
 
+## Mipmaps
+
+One important thing to note is that compressed mipmapped textures in WebGL should always have a complete mipchain going to `1x1` pixel (`512x512`, `256x256`, `128x128`, `64x64`, `32x32`, `16x16`, `8x8`, `4x4`, `2x2`, `1x1`).
+
+Previously I had an option `-l` to pass in a custom amount of mip levels but to avoid confusion I've decided to automatically detect the power of two's down to `1x1` necessary to create the correct amount of mip levels.
+
 ## Licence
 
 My work is released under the [MIT licence](https://raw.githubusercontent.com/TimvanScherpenzeel/texture-compressor/master/LICENSE).
