@@ -1,6 +1,6 @@
 {
   "name": "texture-compressor",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in a KTX container.",
   "main": "index.js",
   "scripts": {
