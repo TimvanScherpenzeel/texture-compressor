@@ -1,6 +1,6 @@
 # Texture compressor
 
-[![npm version](https://badge.fury.io/js/texture-compressor.svg)](https://badge.fury.io/js/texture-compressor)
+[![npm version](https://badge.fury.io/js/texture-compressor.svg)](https://www.npmjs.com/package/texture-compressor)
 [![dependencies](https://david-dm.org/timvanscherpenzeel/texture-compressor.svg)](https://david-dm.org/timvanscherpenzeel/texture-compressor)
 [![devDependencies](https://david-dm.org/timvanscherpenzeel/texture-compressor/dev-status.svg)](https://david-dm.org/timvanscherpenzeel/texture-compressor#info=devDependencies)
 
