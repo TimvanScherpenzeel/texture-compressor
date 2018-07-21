@@ -48,6 +48,7 @@ $ npm install -g --save texture-compressor
 | MacOS High Sierra       | Mac OS  | 10.13      | Firefox       | 59.0            |      |     |      | X    |       |
 | MacOS High Sierra       | Mac OS  | 10.13.3    | Safari        | 11.0.3          |      |     |      | X    |       |
 | Motorola Moto X 2nd Gen | Android | 6.0        | Chrome        | 63.0.3239.111   |      |     | X    |      |       |
+| Oculus Go               | Android | 7.1.2      | Oculus        | 4.5.1.108860099 | X    | X   | X    |      |       |
 | Samsung S6              | Android | 5.0.2      | Chrome        | 63.0.3239.111   | X    |     | X    |      |       |
 | Samsung S7              | Android | 6.0.1      | Chrome        | 63.0.3239.111   | X    |     | X    |      |       |
 | Samsung S7              | Android | 6.0.1      | Firefox       | 51.0            |      | X   | X    |      |       |
