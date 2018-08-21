@@ -182,4 +182,4 @@ This product includes components of the PowerVR™ SDK from Imagination Technolo
 
 - [astcenc](https://raw.githubusercontent.com/ARM-software/astc-encoder/master/license.txt)
 - [PVRTexToolCLI](https://community.imgtec.com/developers/powervr/sdk-end-user-licence-agreement/)
-- [crunch](https://raw.githubusercontent.com/Unvanquished/crunch/master/license.txt)
+- [crunch](https://raw.githubusercontent.com/BinomialLLC/crunch/master/license.txt)
