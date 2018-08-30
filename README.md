@@ -178,7 +178,8 @@ My work is released under the [MIT licence](https://raw.githubusercontent.com/Ti
 Much has been based on the automated texture compression tool baked into [gltf-pipeline](https://raw.githubusercontent.com/AnalyticalGraphicsInc/gltf-pipeline/master/LICENSE.md).
 
 This repository distributes multiple binary tools for Windows, Mac and Linux.
+This product includes components of the PowerVR™ SDK from Imagination Technologies Limited.
 
 - [astcenc](https://raw.githubusercontent.com/ARM-software/astc-encoder/master/license.txt)
 - [PVRTexToolCLI](https://community.imgtec.com/developers/powervr/sdk-end-user-licence-agreement/)
-- [crunch](https://raw.githubusercontent.com/Unvanquished/crunch/master/license.txt)
+- [crunch](https://raw.githubusercontent.com/BinomialLLC/crunch/master/license.txt)
