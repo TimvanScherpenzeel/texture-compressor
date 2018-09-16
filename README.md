@@ -66,7 +66,7 @@ $ npm install -g --save texture-compressor
 | Windows 7               | Windows | 7          | IE            | 11.0            |      |     |      | X    |       |
 | Windows 8               | Windows | 8          | IE            | 10.0            |      |     |      |      |       |
 
-## Example
+## Usage
 
 ### ASTC
 
