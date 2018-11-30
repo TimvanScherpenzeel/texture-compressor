@@ -161,11 +161,13 @@ In [docs/generate_default.sh](docs/generate_default.sh), [docs/generate_flipped_
 
 ### Tool flags
 
-    Tool flags are not processed by `texture-compressor` but rather directly to the binary itself.
+    Tool flags are not processed by `texture-compressor` but rather directly by the binary you are targeting itself.
 
     -f, --flags ["flag value" "flag value"] [not required]
 
-    For example adding `--flags ["usesourceformat DXT1A" "alphaThreshold 200"]` will pass `usesourceformat DXT1A` and `alphaThreshold 200` directly to `Crunch`. Please be aware that these flags are tool specific and can therefore not be directly applied to the other binaries.
+    For example adding `--flags ["usesourceformat DXT1A" "alphaThreshold 200"]` will pass `usesourceformat DXT1A` and `alphaThreshold 200` directly to `Crunch`.
+
+    Please be aware that these flags are tool specific and can therefore not be directly applied to the other binaries.
 
 To find tool specific flags please refer to the manuals of [ASTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [ETC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [PVRTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [S3TC](https://github.com/BinomialLLC/crunch/blob/235946f7a1cf8b9c97e8bf0e8062d5439a51dec7/crunch/crunch.cpp#L70-L181).
 
