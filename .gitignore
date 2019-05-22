@@ -1,2 +1,19 @@
-node_modules
+# OS
 .DS_Store
+
+# Editor
+.vscode
+
+# Cache
+.rpt2_cache
+
+# Node
+node_modules
+
+# Directories
+dist
+input
+output
+
+# Logging
+*.log
