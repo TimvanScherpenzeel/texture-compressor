@@ -90,9 +90,9 @@ Please be aware that these flags are tool specific and can therefore not be dire
 
 To find tool specific flags please refer to the manuals of [ASTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [ETC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [PVRTC](http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf), [S3TC](https://github.com/BinomialLLC/crunch/blob/235946f7a1cf8b9c97e8bf0e8062d5439a51dec7/crunch/crunch.cpp#L70-L181).
 
-## Licence
+## License
 
-My work is released under the [MIT licence](https://raw.githubusercontent.com/TimvanScherpenzeel/texture-compressor/master/LICENSE).
+My work is released under the [MIT license](https://raw.githubusercontent.com/TimvanScherpenzeel/texture-compressor/master/LICENSE).
 
 This repository distributes multiple binary tools for Windows, Mac and Linux.
 This product includes components of the PowerVR™ SDK from Imagination Technologies Limited.
