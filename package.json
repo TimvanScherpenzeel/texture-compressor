@@ -1,0 +1,37 @@
+{
+  "name": "texture-compressor",
+  "version": "1.0.0",
+  "description": "CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in a KTX container.",
+  "main": "dist/cli/lib/index.js",
+  "scripts": {
+    "start": "tsc -w",
+    "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "rimraf dist docs",
+    "build": "tsc",
+    "postbuild": "typedoc --out docs --target es5 --theme minimal --hideGenerator"
+  },
+  "bin": {
+    "texture-compressor": "./bin/texture-compressor.js"
+  },
+  "author": "Tim van Scherpenzeel",
+  "license": "MIT",
+  "dependencies": {
+    "argparse": "^1.0.10",
+    "image-size": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/argparse": "^1.0.36",
+    "prettier": "^1.17.1",
+    "rimraf": "^2.6.3",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.4.5"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 100
+  }
+}
