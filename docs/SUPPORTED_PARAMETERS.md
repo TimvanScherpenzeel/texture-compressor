@@ -1,4 +1,4 @@
-# Parameters
+# Supported parameters
 
 ## ASTC
 

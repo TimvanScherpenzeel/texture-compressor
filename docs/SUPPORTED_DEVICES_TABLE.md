@@ -1,4 +1,4 @@
-# Support table
+# Supported devices table
 
 | Device                  | OS      | OS version | Browser       | Browser version | ASTC | ETC | ETC1 | S3TC | PVRTC |
 | ----------------------- | ------- | ---------- | ------------- | --------------- | ---- | --- | ---- | ---- | ----- |
