@@ -14,7 +14,9 @@ Make sure you have [Node.js](http://nodejs.org/) installed.
 
 ## Documentation
 
-[Support table](docs/SUPPORT_TABLE.md)
+[Supported devices table](docs/SUPPORTED_DEVICES_TABLE.md)
+
+[Supported parameters](docs/SUPPORTED_PARAMETERS.md)
 
 ## CLI Usage
 
