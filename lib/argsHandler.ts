@@ -13,10 +13,10 @@ import {
   ETC_QUALITY_TYPES,
   IS_ASTC,
   IS_ETC,
-  IS_PVR,
+  IS_PVRTC,
   IS_S3TC,
-  PVR_COMPRESSION_TYPES,
-  PVR_QUALITY_TYPES,
+  PVRTC_COMPRESSION_TYPES,
+  PVRTC_QUALITY_TYPES,
   S3TC_COMPRESSION_TYPES,
   S3TC_QUALITY_TYPES,
 } from './constants';
@@ -55,7 +55,7 @@ const createParserArguments = (): ICLIArgs => {
     choices: [
       ...(IS_ASTC ? ASTC_COMPRESSION_TYPES : []),
       ...(IS_ETC ? ETC_COMPRESSION_TYPES : []),
-      ...(IS_PVR ? PVR_COMPRESSION_TYPES : []),
+      ...(IS_PVRTC ? PVRTC_COMPRESSION_TYPES : []),
       ...(IS_S3TC ? S3TC_COMPRESSION_TYPES : []),
     ],
     help: 'Compression internal format',
@@ -67,7 +67,7 @@ const createParserArguments = (): ICLIArgs => {
     choices: [
       ...(IS_ASTC ? ASTC_QUALITY_TYPES : []),
       ...(IS_ETC ? ETC_QUALITY_TYPES : []),
-      ...(IS_PVR ? PVR_QUALITY_TYPES : []),
+      ...(IS_PVRTC ? PVRTC_QUALITY_TYPES : []),
       ...(IS_S3TC ? S3TC_QUALITY_TYPES : []),
     ],
     help: 'Quality type',

@@ -1,7 +1,7 @@
 /**
  * General constants
  */
-export const COMPRESSION_FORMAT_FLAGS = ['astc', 'etc', 'pvr', 's3tc'];
+export const COMPRESSION_FORMAT_FLAGS = ['astc', 'etc', 'pvrtc', 's3tc'];
 
 /**
  * Compression tool: PVRTexTool (http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf)
@@ -61,12 +61,12 @@ export const ETC_QUALITY_TYPES = ['etcfast', 'etcslow', 'etcfastperceptual', 'et
  * Compression tool: PVRTexTool (http://cdn.imgtec.com/sdk-documentation/PVRTexTool.User+Manual.pdf)
  * WebGL extension: http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
  */
-export const PVR = 'pvr';
-export const IS_PVR = process.argv.includes(PVR);
-export const PVR_SUPPORTED_INPUT_TYPES = ['.jpeg', '.jpg', '.png', '.bmp'];
-export const PVR_SUPPORTED_OUTPUT_TYPES = ['.ktx'];
-export const PVR_COMPRESSION_TYPES = ['PVRTC1_2', 'PVRTC1_4', 'PVRTC1_2_RGB', 'PVRTC1_4_RGB'];
-export const PVR_QUALITY_TYPES = [
+export const PVRTC = 'pvrtc';
+export const IS_PVRTC = process.argv.includes(PVRTC);
+export const PVRTC_SUPPORTED_INPUT_TYPES = ['.jpeg', '.jpg', '.png', '.bmp'];
+export const PVRTC_SUPPORTED_OUTPUT_TYPES = ['.ktx'];
+export const PVRTC_COMPRESSION_TYPES = ['PVRTC1_2', 'PVRTC1_4', 'PVRTC1_2_RGB', 'PVRTC1_4_RGB'];
+export const PVRTC_QUALITY_TYPES = [
   'pvrtcfastest',
   'pvrtcfast',
   'pvrtcnormal',

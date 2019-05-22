@@ -6,9 +6,8 @@
   "scripts": {
     "start": "tsc -w",
     "lint": "tslint --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
-    "prebuild": "rimraf dist docs",
-    "build": "tsc",
-    "postbuild": "typedoc --out docs --target es5 --theme minimal --hideGenerator"
+    "prebuild": "rimraf dist",
+    "build": "tsc"
   },
   "bin": {
     "texture-compressor": "./bin/texture-compressor.js"
@@ -16,6 +15,7 @@
   "author": "Tim van Scherpenzeel",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^12.0.2",
     "argparse": "^1.0.10",
     "image-size": "^0.7.4"
   },
@@ -25,7 +25,6 @@
     "rimraf": "^2.6.3",
     "tslint": "^5.16.0",
     "tslint-config-prettier": "^1.18.0",
-    "typedoc": "^0.14.2",
     "typescript": "^3.4.5"
   },
   "prettier": {

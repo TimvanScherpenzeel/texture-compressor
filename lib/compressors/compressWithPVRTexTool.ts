@@ -17,18 +17,18 @@ import {
   ETC_QUALITY_TYPES,
   ETC_SUPPORTED_INPUT_TYPES,
   ETC_SUPPORTED_OUTPUT_TYPES,
-  PVR,
-  PVR_COMPRESSION_TYPES,
-  PVR_QUALITY_TYPES,
-  PVR_SUPPORTED_INPUT_TYPES,
-  PVR_SUPPORTED_OUTPUT_TYPES,
+  PVRTC,
+  PVRTC_COMPRESSION_TYPES,
+  PVRTC_QUALITY_TYPES,
+  PVRTC_SUPPORTED_INPUT_TYPES,
+  PVRTC_SUPPORTED_OUTPUT_TYPES,
 } from '../constants';
 
 // Utilities
 import { getImageSize, getMipChainLevels } from '../utilities';
 
 /**
- * Compress texture with the ASTC, ETC or PVR compression format
+ * Compress texture with the ASTC, ETC or PVRTC compression format
  */
 export const compressWithPVRTexTool = (args: ICLIArgs): Promise<any> => {
   if (args.type === ASTC) {
@@ -47,13 +47,13 @@ export const compressWithPVRTexTool = (args: ICLIArgs): Promise<any> => {
       ETC_COMPRESSION_TYPES,
       ETC_QUALITY_TYPES
     );
-  } else if (args.type === PVR) {
+  } else if (args.type === PVRTC) {
     validateArgs(
       args,
-      PVR_SUPPORTED_INPUT_TYPES,
-      PVR_SUPPORTED_OUTPUT_TYPES,
-      PVR_COMPRESSION_TYPES,
-      PVR_QUALITY_TYPES
+      PVRTC_SUPPORTED_INPUT_TYPES,
+      PVRTC_SUPPORTED_OUTPUT_TYPES,
+      PVRTC_COMPRESSION_TYPES,
+      PVRTC_QUALITY_TYPES
     );
   } else {
     throw new Error('Unknown compression format');

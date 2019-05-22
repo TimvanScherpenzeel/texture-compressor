@@ -27,7 +27,7 @@ export const pack = (CLIArgs?: ICLIArgs): Promise<any> => {
   switch (args.type) {
     case 'astc':
     case 'etc':
-    case 'pvr':
+    case 'pvrtc':
       return compressWithPVRTexTool(args);
     case 's3tc':
       return compressWithCrunch(args);
