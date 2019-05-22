@@ -18,7 +18,7 @@ Make sure you have [Node.js](http://nodejs.org/) installed.
 
 [Supported parameters](docs/SUPPORTED_PARAMETERS.md)
 
-[Recommended settings](docs/RECOMMENDED_SETTINGS.md)
+[Recommended parameters](docs/RECOMMENDED_PARAMETERS.md)
 
 ## CLI Usage
 
