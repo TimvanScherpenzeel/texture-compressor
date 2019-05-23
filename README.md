@@ -12,6 +12,10 @@ Make sure you have [Node.js](http://nodejs.org/) installed.
  $ npm install texture-compressor
 ```
 
+## Live demo
+
+[Live demo](https://timvanscherpenzeel.github.io/texture-compressor/)
+
 ## Documentation
 
 [Supported devices table](docs/SUPPORTED_DEVICES_TABLE.md)
