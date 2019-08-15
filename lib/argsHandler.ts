@@ -88,6 +88,20 @@ const createParserArguments = (): ICLIArgs => {
     required: false,
   });
 
+  // Resize square flag
+  parser.addArgument(['-rs', '--square'], {
+    choices: ['no', '-', '+'],
+    help: 'Force the texture into a square (default: +)',
+    required: false,
+  });
+
+  // Resize power of two flag
+  parser.addArgument(['-rp', '--pot'], {
+    choices: ['no', '-', '+'],
+    help: 'Force the texture into power of two dimensions (default: +)',
+    required: false,
+  });
+
   // Arbitrary flags to pass on to specific tool
   parser.addArgument(['-f', '--flags'], {
     help: 'Any flags you want to directly pass to the compression tool',
@@ -112,6 +126,8 @@ export interface ICLIArgs {
   quality: string;
   mipmap?: boolean;
   flipY?: boolean;
+  square?: string;
+  pot?: string;
   flags?: string[] | null;
   verbose?: boolean;
 }

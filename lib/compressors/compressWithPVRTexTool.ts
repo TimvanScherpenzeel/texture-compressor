@@ -67,12 +67,16 @@ export const compressWithPVRTexTool = (args: ICLIArgs): Promise<any> => {
     '-f',
     `${args.compression}`,
     `-q`,
-    `${args.quality}`,
-    `-square`,
-    `+`,
-    `-pot`,
-    `+`,
+    `${args.quality}`,    
   ];
+
+  if (args.square !== 'no') {
+    flagMapping.push('-square', args.square || '+');
+  }
+
+  if (args.pot !== 'no') {
+    flagMapping.push('-pot', args.pot || '+');
+  }
 
   if (args.mipmap) {
     const { width } = getImageSize(args.input);
