@@ -79,6 +79,8 @@ pack({
 
     -vb, --verbose [true / false, default: false] [not required]
 
+    -rs, --square ['no', '-', '+', default: +] [not required]
+    -rp, --pot ['no', '-', '+', default: +] [not required]
     -m, --mipmap [true / false, default: false] [not required]
     -y, --flipY [tue / false, default: false] [not required]
 

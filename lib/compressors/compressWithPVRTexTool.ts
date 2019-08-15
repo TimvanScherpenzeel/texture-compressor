@@ -67,11 +67,11 @@ export const compressWithPVRTexTool = (args: ICLIArgs): Promise<any> => {
     '-f',
     `${args.compression}`,
     `-q`,
-    `${args.quality}`,    
+    `${args.quality}`,
   ];
 
   if (args.square !== 'no') {
-    flagMapping.push('-square', args.square || '+');
+    flagMapping.push('-square', args.square || '+');
   }
 
   if (args.pot !== 'no') {
