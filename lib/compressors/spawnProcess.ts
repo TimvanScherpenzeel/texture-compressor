@@ -25,7 +25,7 @@ export const spawnProcess = (
   const combinedFlags = [...flagMapping, ...toolFlags];
 
   return new Promise(
-    (resolve): void => {
+    (resolve, reject): void => {
       if (args.verbose) {
         console.log(`Using flags: ${combinedFlags}`);
       }
@@ -47,7 +47,7 @@ export const spawnProcess = (
 
       child.once('exit', (code: number) => {
         if (code !== 0) {
-          throw new Error(`Compression tool exited with error code ${code}`);
+          reject(new Error(`Compression tool exited with error code ${code}`));
         } else {
           resolve();
         }
