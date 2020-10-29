@@ -6,8 +6,6 @@ CLI tool for texture compression using ASTC, ETC, PVRTC and S3TC in a KTX contai
 
 ## Sponsor
 
-[![Sponsor](https://img.shields.io/badge/Sponsors--_.svg?style=social&logo=github)](https://github.com/sponsors/TimvanScherpenzeel)
-
 [![BTC](https://img.shields.io/badge/BTC-3JK7LX5JsSYTKja16eGmDtjKfyTexVwB8z-f5f5f5?logo=bitcoin)](https://blockchain.com/btc/address/3JK7LX5JsSYTKja16eGmDtjKfyTexVwB8z)
 
 [![ETH](https://img.shields.io/badge/ETH-0xDd324578a724Af06B9c39E3351C3627Cb85D85cA-f5f5f5?logo=ethereum)](https://blockchain.com/eth/address/0xDd324578a724Af06B9c39E3351C3627Cb85D85cA)
